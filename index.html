@@ -624,7 +624,7 @@
         let inputDvkd = document.getElementById('inp_dvkd').value || "Chua_co_don_vi";
         let inputDate = document.getElementById('inp_date').value;
         let formattedDate = inputDate ? inputDate.split('-').reverse().join('-') : "Chua_co_ngay";
-        document.title = `BB ghi nhan loi_${inputDvkd}_${formattedDate}`;
+        document.title = `BC danh gia CLDV_${inputDvkd}_${formattedDate}`;
 
         document.getElementById('p_dvkd').innerText = document.getElementById('inp_dvkd').value || "...";
         let d = document.getElementById('inp_date').value;
@@ -699,7 +699,7 @@
     function closePreview() {
         document.getElementById('print-section').style.display = 'none';
         document.getElementById('inputScreen').style.display = 'block';
-        document.title = "Phiếu Ghi Nhận Lỗi CSVC & Nhân Sự";
+        document.title = "PHIẾU ĐÁNH GIÁ CHẤT LƯỢNG DỊCH VỤ";
     }
 
     function executePrint() {
