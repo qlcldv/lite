@@ -545,7 +545,7 @@
         @media (max-width: 699px) {
             .btn-group {
                 display: grid;
-                grid-template-columns: repeat(4, minmax(0, 1fr));
+                grid-template-columns: repeat(3, minmax(0, 1fr));
                 gap: 3px;
                 margin-top: 2px;
                 padding: 3px;
@@ -2478,7 +2478,6 @@
                 </div>
                 <div class="btn-group">
                     <button type="button" class="btn-eval pass active" onclick="setRate('${id}', 'Đạt', this)">✔ Đạt</button>
-                    <button type="button" class="btn-eval pending" onclick="setRate('${id}', 'Đang khắc phục', this)">⏳ Đang xử lý</button>
                     <button type="button" class="btn-eval fail" onclick="setRate('${id}', 'Không đạt', this)">✖ Không đạt</button>
                     <button type="button" class="btn-eval na" onclick="setRate('${id}', 'K.Áp dụng', this)" title="Không đánh giá hạng mục này">— Không đánh giá</button>
                 </div>
