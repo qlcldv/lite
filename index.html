@@ -473,23 +473,9 @@
         .item-short-title { font-weight: 700; color: var(--slate-900); }
         .item-spec-inline { font-size: 13px; color: var(--slate-700); font-weight: 400; }
 
-        /* Chip Quy chuẩn & Ảnh Mẫu tinh gọn */
         .btn-info-spec, .btn-eye-sample {
             display: none !important;
         }
-        .btn-info-spec {
-            color: var(--slate-700);
-            background: var(--slate-100);
-            border: 1px solid var(--slate-200);
-        }
-        .btn-info-spec:hover { background: var(--slate-200); }
-        .btn-eye-sample {
-            color: var(--primary);
-            background: var(--primary-soft);
-            border: 1px solid #bfdbfe;
-        }
-        .btn-eye-sample:hover { background: #dbeafe; }
-        .btn-eye-sample svg { width: 12px; height: 12px; fill: currentColor; }
 
         /* Hộp quy chuẩn chi tiết */
         .spec-detail-collapse {
@@ -532,7 +518,6 @@
         }
         .btn-eval:hover { color: var(--slate-900); }
         .btn-eval.pass.active { background: var(--success); color: #fff; box-shadow: 0 1px 3px rgba(16, 185, 129, 0.3); }
-        .btn-eval.pending.active { background: var(--warning); color: #fff; box-shadow: 0 1px 3px rgba(245, 158, 11, 0.3); }
         .btn-eval.fail.active { background: var(--danger); color: #fff; box-shadow: 0 1px 3px rgba(239, 68, 68, 0.3); }
         .btn-eval.na.active { background: var(--slate-500); color: #fff; }
 
@@ -558,18 +543,8 @@
                 text-overflow: ellipsis;
             }
         }
-        @media (max-width: 390px) {
-            .btn-group {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 4px;
-            }
-            .btn-eval {
-                padding: 8px 6px;
-                font-size: 12px;
-            }
-        }
 
-        /* === NGĂN NHẬP LỖI TRỰC TIẾP (INLINE DRAWER) + QUICK CHIPS === */
+        /* === NGĂN GHI NHẬN HIỆN TRẠNG TRỰC TIẾP (INLINE DRAWER) + QUICK CHIPS === */
         .inline-issue-drawer {
             display: none;
             flex-direction: column;
@@ -580,10 +555,6 @@
             border-radius: 8px;
             margin-top: 4px;
             box-shadow: 0 2px 6px rgba(239, 68, 68, 0.06);
-        }
-        .inline-issue-drawer.pending-mode {
-            background: #fffbeb;
-            border-color: #fde68a;
         }
         .quick-issue-chips {
             display: flex;
@@ -603,8 +574,6 @@
             transition: all 0.12s;
         }
         .quick-chip-btn:hover { background: #fee2e2; color: #b91c1c; border-color: #fca5a5; }
-        .drawer-grid-top { display: grid; grid-template-columns: 1fr; gap: 6px; }
-        @media (min-width: 640px) { .drawer-grid-top { grid-template-columns: 1.35fr 1fr; } }
         .voice-input-group {
             display: flex;
             align-items: center;
@@ -613,7 +582,7 @@
         }
         .drawer-input {
             width: 100%;
-            padding: 7px 10px;
+            padding: 8px 10px;
             font-size: 13px;
             border: 1px solid var(--slate-300);
             border-radius: 6px;
@@ -625,9 +594,9 @@
             background: var(--slate-100);
             border: 1px solid var(--slate-200);
             color: var(--slate-700);
-            font-size: 11px;
+            font-size: 11.5px;
             font-weight: 600;
-            padding: 4px 8px;
+            padding: 5px 10px;
             border-radius: 6px;
             cursor: pointer;
             display: inline-flex;
@@ -664,24 +633,12 @@
             align-items: center;
             justify-content: space-between;
         }
-        .drawer-controls-left { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; flex: 1; min-width: 0; }
-        .drawer-select {
-            padding: 5px 8px;
-            font-size: 12px;
-            font-weight: 600;
-            border: 1px solid var(--slate-300);
-            border-radius: 6px;
-            background: #fff;
-            color: var(--slate-900);
-            max-width: 100%;
-        }
-        .drawer-select.deduct { color: #b91c1c; border-color: #fca5a5; background: #fef2f2; }
         .btn-inline-cam {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 4px;
-            padding: 6px 10px;
+            padding: 6px 11px;
             background: var(--primary);
             color: #fff;
             border: none;
@@ -695,7 +652,7 @@
             background: #0f766e;
         }
         .inline-thumbs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 2px; }
-        .inline-thumb-wrap { position: relative; width: 62px; height: 62px; }
+        .inline-thumb-wrap { position: relative; width: 64px; height: 64px; }
         .inline-thumb-wrap img {
             width: 100%; height: 100%; object-fit: cover; border-radius: 6px;
             border: 1px solid var(--slate-300); cursor: pointer;
@@ -716,24 +673,6 @@
             border-radius: 50%; background: var(--danger); color: #fff; border: none;
             font-size: 11px; line-height: 16px; text-align: center; cursor: pointer; padding: 0; font-weight: bold;
         }
-        .deadline-quick-pills {
-            display: inline-flex;
-            align-items: center;
-            gap: 3px;
-            flex-wrap: wrap;
-        }
-        .btn-dl-chip {
-            border: 1px solid #cbd5e1;
-            background: #f8fafc;
-            color: #334155;
-            border-radius: 10px;
-            padding: 3px 7px;
-            font-size: 11px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.12s;
-        }
-        .btn-dl-chip:hover { background: var(--primary-soft); color: var(--primary); border-color: #93c5fd; }
 
         /* Nút nổi chuyển nhanh Lên đầu trang & Tới lỗi tiếp theo */
         .floating-quick-jump {
@@ -1051,10 +990,6 @@
                 font-size: 13px;
                 gap: 4px;
             }
-            .btn-info-spec, .btn-eye-sample {
-                font-size: 10.5px;
-                padding: 2px 7px;
-            }
             .inline-issue-drawer {
                 padding: 8px 9px;
                 gap: 6px;
@@ -1074,22 +1009,6 @@
             .drawer-input {
                 font-size: 13.5px;
                 padding: 6px 8px;
-            }
-            .drawer-bottom-bar {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 6px;
-            }
-            .drawer-controls-left {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 5px;
-                width: 100%;
-            }
-            .drawer-select {
-                width: 100%;
-                font-size: 12px;
-                padding: 5px 6px;
             }
             .btn-inline-cam {
                 padding: 6px 10px;
@@ -1205,7 +1124,7 @@
         .btn-back { max-width: 220px; flex: 1; background: #475569; color: white; border: none; padding: 10px 12px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 12.5px; white-space: nowrap; }
         .btn-print-real { max-width: 300px; flex: 1.3; background: #059669; color: white; border: none; padding: 10px 14px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 13px; box-shadow: 0 4px 12px rgba(5, 150, 105, 0.35); white-space: nowrap; }
 
-        /* Header PDF chuẩn VAB Trụ Sở Chính (Có fallback hiển thị đầy đủ nếu không có ảnh Header.jpg) */
+        /* Header PDF chuẩn VAB Trụ Sở Chính */
         .tsc-pdf-header-fallback {
             display: flex;
             justify-content: space-between;
@@ -1253,38 +1172,26 @@
         .sec-overview-table th, .sec-overview-table td { border: 1px solid #000; padding: 6px 8px; word-break: break-word; }
         .sec-overview-table th { background-color: #f1f5f9 !important; font-weight: bold; text-align: center; }
 
-        table.report-table { width: 100%; border-collapse: collapse; font-size: 11pt; margin-bottom: 12px; }
-        table.report-table th, table.report-table td { border: 1px solid black; padding: 6px 8px; vertical-align: middle; color: #000; word-break: normal; overflow-wrap: break-word; }
+        table.report-table { width: 100%; border-collapse: collapse; font-size: 10.5pt; margin-bottom: 12px; }
+        table.report-table th, table.report-table td { border: 1px solid black; padding: 6px 7px; vertical-align: middle; color: #000; word-break: normal; overflow-wrap: break-word; }
         table.report-table th { background-color: #e9ecef !important; text-align: center; font-weight: bold; }
         
         .text-center { text-align: center; }
         .text-left { text-align: left; }
         .header-row { background-color: #dde2e7 !important; font-weight: bold; text-transform: uppercase; color: #000; font-size: 10.5pt; }
 
-        .std-quote-box {
-            margin-top: 5px;
-            padding: 4px 8px;
-            background-color: #f8fafc !important;
-            border-left: 2.5px solid #475569;
-            font-size: 10pt;
-            color: #1e293b;
-            line-height: 1.35;
-        }
-        .paper.hide-std-quote .std-quote-box {
-            display: none !important;
-        }
-
-        /* Lưới ảnh minh chứng cỡ lớn, rõ nét trong bảng PDF */
+        /* Lưới ảnh minh chứng hiển thị ngay trong bảng Checklist PDF */
         .print-img-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 6px;
-            justify-content: center;
+            gap: 5px;
+            justify-content: flex-start;
             align-items: center;
+            margin-top: 6px;
         }
         .img-print {
-            width: 185px;
-            height: 140px;
+            width: 115px;
+            height: 88px;
             max-width: 100%;
             object-fit: contain;
             background: #f8fafc;
@@ -1295,21 +1202,21 @@
             display: block;
         }
         .print-img-grid.single-img .img-print {
-            width: 235px;
-            height: 175px;
+            width: 145px;
+            height: 110px;
         }
         .paper.img-size-lg .img-print {
-            width: 235px;
-            height: 175px;
+            width: 145px;
+            height: 110px;
         }
         .paper.img-size-lg .print-img-grid.single-img .img-print {
-            width: 265px;
-            height: 200px;
+            width: 175px;
+            height: 132px;
         }
         .paper.img-size-xl .img-print,
         .paper.img-size-xl .print-img-grid.single-img .img-print {
-            width: 310px;
-            height: 235px;
+            width: 220px;
+            height: 165px;
         }
 
         /* Phụ lục Hình ảnh Minh chứng Phóng to ở cuối Biên bản A4 */
@@ -1363,15 +1270,11 @@
             cursor: zoom-in;
         }
 
-        .paper.hide-report-images .col-img-cell,
-        .paper.hide-report-images .col-img-header,
+        .paper.hide-report-images .print-img-grid,
         .paper.hide-report-images #print_photo_appendix_wrap {
             display: none !important;
         }
         .paper.hide-appendix #print_photo_appendix_wrap {
-            display: none !important;
-        }
-        .paper.hide-full-checklist #print_full_checklist_wrap {
             display: none !important;
         }
 
@@ -1463,15 +1366,12 @@
             .paper:not(.a4-zoom-fit) .sec-overview-table td {
                 padding: 4px 4px;
             }
-            .paper:not(.a4-zoom-fit) .col-img-header {
-                width: 95px !important;
-            }
             .paper:not(.a4-zoom-fit) .img-print,
             .paper:not(.a4-zoom-fit).img-size-lg .img-print,
             .paper:not(.a4-zoom-fit).img-size-xl .img-print,
             .paper:not(.a4-zoom-fit) .print-img-grid.single-img .img-print {
-                width: 88px !important;
-                height: 70px !important;
+                width: 85px !important;
+                height: 65px !important;
             }
             .paper:not(.a4-zoom-fit) .appendix-grid {
                 grid-template-columns: 1fr;
@@ -1515,7 +1415,7 @@
 <div id="toast_msg"></div>
 
 <div class="app-container" id="inputScreen">
-    <!-- HEADER HIỆN ĐẠI TÍCH HỢP TOOLBAR TINH GỌN (KHÔNG CẦN ĐĂNG NHẬP USER) -->
+    <!-- HEADER HIỆN ĐẠI TÍCH HỢP TOOLBAR TINH GỌN -->
     <div class="modern-header">
         <div class="header-main-row">
             <div class="brand-left">
@@ -1525,14 +1425,13 @@
                 <div class="brand-title">
                     <h1>PHIẾU ĐÁNH GIÁ CHẤT LƯỢNG DỊCH VỤ</h1>
                     <div class="brand-subtitle">
-                        <span> </span>
-                        <span class="draft-pill" id="draft_status_text">✨ Phiếu đánh giá CLDV & CSVC</span>
+                        <span class="draft-pill" id="draft_status_text">✨ Phiếu đánh giá CLDV &amp; CSVC</span>
                     </div>
                 </div>
             </div>
             <div class="header-actions">
-                <button type="button" class="btn-glass" id="btn_filter_issues" onclick="toggleFilterIssues()" title="Chỉ hiển thị các tiêu chí Không đạt / Đang xử lý">
-                    🔍 Lọc lỗi (<span id="filter_issue_count">0</span>)
+                <button type="button" class="btn-glass" id="btn_filter_issues" onclick="toggleFilterIssues()" title="Chỉ hiển thị các tiêu chí Không đạt">
+                    🔍 Lọc K.Đạt (<span id="filter_issue_count">0</span>)
                 </button>
                 <button type="button" class="btn-glass" id="btn_filter_unverified" onclick="toggleFilterUnverified()" title="Lọc các tiêu chí chưa bấm kiểm tra thực tế">
                     👁️ Chưa kiểm (<span id="unverified_count_badge">0</span>)
@@ -1553,11 +1452,11 @@
         </div>
     </div>
 
-    <!-- KHỐI THÔNG TIN TRỤ SỞ CHÍNH & CÁN BỘ ĐÁNH GIÁ (NHẬP TỰ DO) -->
+    <!-- KHỐI THÔNG TIN TRỤ SỞ CHÍNH & CÁN BỘ ĐÁNH GIÁ -->
     <div class="info-card expanded" id="unit_info_card">
         <div class="info-summary-bar" onclick="toggleUnitInfoCard()">
             <div class="info-summary-text" id="unit_summary_label">
-                <span>🏢 <b> </b></span> <span style="color:#94a3b8;">•</span> <span>📅 --/--/----</span> <span style="color:#94a3b8;">•</span> <span>👤 Chưa nhập CBĐG</span>
+                <span>🏢 <b>Trụ Sở Chính</b></span> <span style="color:#94a3b8;">•</span> <span>📅 --/--/----</span> <span style="color:#94a3b8;">•</span> <span>👤 Chưa nhập CBĐG</span>
             </div>
             <button type="button" class="info-toggle-btn" id="unit_toggle_btn">Thu gọn ▲</button>
         </div>
@@ -1565,15 +1464,11 @@
             <div class="info-grid">
                 <div>
                     <label class="input-label">🏢 Khu vực / Tầng đánh giá:</label>
-                    <input type="text" id="inp_dvkd" class="form-control" list="tsc_area_list" value=" " placeholder="Nhập tên Tầng / Khu vực / Khối Phòng ban tại TSC..." oninput="updateUnitSummaryBar()">
+                    <input type="text" id="inp_dvkd" class="form-control" list="tsc_area_list" value="" placeholder="Nhập tên Tầng / Khu vực / Khối Phòng ban tại TSC..." oninput="updateUnitSummaryBar()">
                     <datalist id="tsc_area_list">
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
+                        <option value="Trụ sở chính - Tầng 4"></option>
+                        <option value="Trụ sở chính - Tầng 5"></option>
+                        <option value="Trụ sở chính - Toàn bộ Tầng 4 & 5"></option>
                     </datalist>
                 </div>
                 <div>
@@ -1584,19 +1479,15 @@
                     <label class="input-label">👤 Cán bộ đánh giá (Nhập họ tên):</label>
                     <input type="text" id="inp_user" class="form-control" list="evaluator_free_list" placeholder="Gõ họ tên CBĐG hoặc chọn nhanh...." oninput="updateUnitSummaryBar()">
                     <datalist id="evaluator_free_list">
-                        <option value="">Nguyễn Thị Thu Hiền</option>
-                        <option value="">Dương Thị Thu Hiền</option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
+                        <option value="Nguyễn Thị Thu Hiền"></option>
+                        <option value="Dương Thị Thu Hiền"></option>
                     </datalist>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- THANH STEP TABS CHUYỂN NHANH 9 MỤC THEO ĐÚNG FILE PDF TSC + THANH TÌM KIẾM TIÊU CHÍ (STICKY) -->
+    <!-- THANH STEP TABS CHUYỂN NHANH 9 MỤC + THANH TÌM KIẾM TIÊU CHÍ (STICKY) -->
     <div class="step-tabs-wrapper">
         <div class="step-tabs" id="main_step_tabs">
             <button type="button" class="step-tab-btn active" id="tab_btn_1" onclick="switchStepTab(1)">
@@ -1722,86 +1613,37 @@
         </div>
     </div>
     
-    <!-- TAB 9: TỔNG HỢP TỒN TẠI CSVC TSC & Ý KIẾN KÝ DUYỆT -->
+    <!-- TAB 9: TỔNG HỢP GHI NHẬN TẠI TSC & Ý KIẾN KÝ DUYỆT -->
     <div id="grp9" class="section-box criteria-group">
-        <!-- TỔNG HỢP LỖI CSVC/5S TẠI TSC -->
         <div id="csvc_topbar_mount"></div>
         <div id="csvc_container">
             <div style="background:var(--primary-soft); border:1px solid #bfdbfe; border-radius:8px; padding:10px 12px; margin-bottom:10px; font-size:12.5px; color:var(--primary-dark); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-                <span>✨ <b>Đồng bộ 2 chiều &amp; Hạn khắc phục hàng loạt:</b> Chạm vào ảnh để vẽ Mũi tên / Khung khoanh đỏ hoặc đổi nhãn <b>[Trước KP] / [Sau KP]</b>.</span>
-                <div style="display:flex; gap:6px; flex-wrap:wrap; align-items:center; width:100%;">
-                    <div style="display:inline-flex; align-items:center; gap:4px; background:#fff; padding:4px 8px; border-radius:6px; border:1px solid #93c5fd; flex-wrap:wrap; flex:1;">
-                        <span style="font-size:11.5px; font-weight:700;">📅 Đồng bộ hạn tất cả lỗi:</span>
-                        <input type="date" id="batch_error_date_inp" style="border:1px solid #cbd5e1; border-radius:4px; font-size:12px; padding:3px 5px; flex:1; min-width:125px;">
-                        <button type="button" onclick="applyBatchDeadlineToAllErrors()" style="background:var(--primary); color:#fff; border:none; border-radius:4px; padding:4px 10px; font-size:11.5px; font-weight:600; cursor:pointer;">Áp dụng</button>
-                    </div>
-                    <button type="button" onclick="toggleManualErrorBox()" style="background:#fff; color:var(--primary); border:1px solid #93c5fd; padding:6px 10px; border-radius:6px; font-weight:600; font-size:12px; cursor:pointer;">
-                        + Thêm phát sinh ngoài danh mục
-                    </button>
-                </div>
+                <span>✨ <b>Gộp tự động vào bảng Checklist khi xuất PDF:</b> Mọi ghi nhận hiện trạng &amp; hình ảnh của các mục "Không đạt" sẽ hiển thị trực tiếp trong bảng Checklist. Chạm vào ảnh để vẽ khoanh đỏ vị trí lỗi.</span>
+                <button type="button" onclick="toggleManualErrorBox()" style="background:#fff; color:var(--primary); border:1px solid #93c5fd; padding:6px 12px; border-radius:6px; font-weight:600; font-size:12px; cursor:pointer;">
+                    + Thêm ghi nhận phát sinh ngoài danh mục
+                </button>
             </div>
 
             <div class="error-area" id="manual_error_form_box" style="display:none; background:#fff5f5; border:1px dashed #fca5a5; padding:12px; border-radius:8px; margin-bottom:12px;">
-                <label class="input-label">Hạng mục &amp; Hiện trạng thực tế ghi nhận tại TSC:</label>
-                <input type="text" id="err_desc" class="form-control" placeholder="Nhập hạng mục và hiện trạng thực tế..." style="margin-bottom:8px;">
-                <label class="input-label">Đề xuất phương án xử lý / Giải pháp:</label>
-                <textarea id="err_solution" class="form-control" rows="2" placeholder="Đề xuất phương án xử lý / Giải pháp..." style="margin-bottom:8px;"></textarea>
+                <label class="input-label">Hạng mục &amp; Mô tả ghi nhận hiện trạng thực tế tại TSC:</label>
+                <input type="text" id="err_desc" class="form-control" placeholder="Nhập hạng mục và mô tả hiện trạng thực tế..." style="margin-bottom:8px;">
+                <label class="input-label">Đề xuất phương án xử lý / Khắc phục (nếu có):</label>
+                <textarea id="err_solution" class="form-control" rows="2" placeholder="Nhập đề xuất phương án xử lý..." style="margin-bottom:8px;"></textarea>
                 
-                <div class="info-grid" style="margin-bottom:8px;">
-                    <div>
-                        <label class="input-label">Hình thức ghi nhận:</label>
-                        <select id="err_type" class="form-control" onchange="toggleErrDetail()">
-                            <option value="Ghi nhận trừ điểm tuân thủ">Ghi nhận trừ điểm</option>
-                            <option value="Nhắc nhở (không trừ điểm)">Nhắc nhở (không trừ điểm)</option>
-                            <option value="Theo dõi">Theo dõi</option>
-                        </select>
-                    </div>
-                    <div id="err_detail_point_container" style="display:block;">
-                        <label class="input-label">Số điểm trừ:</label>
-                        <select id="err_point" class="form-control">
-                            <option value="Trừ 1 điểm">Trừ 1 điểm</option>
-                            <option value="Trừ 2 điểm">Trừ 2 điểm</option>
-                            <option value="Trừ 3 điểm">Trừ 3 điểm</option>
-                            <option value="Trừ 4 điểm">Trừ 4 điểm</option>
-                            <option value="Trừ 5 điểm">Trừ 5 điểm</option>
-                        </select>
-                    </div>
-                    <div id="err_detail_remind_container" style="display:none;">
-                        <label class="input-label">Số lần nhắc nhở:</label>
-                        <select id="err_remind" class="form-control">
-                            <option value="Lần 1">Lần 1</option>
-                            <option value="Lần 2">Lần 2</option>
-                            <option value="Lần 3">Lần 3</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="input-label">Thời hạn khắc phục:</label>
-                        <select id="err_date_type" class="form-control" onchange="toggleDateInput()">
-                            <option value="date">Chọn ngày cụ thể</option>
-                            <option value="Khắc phục ngay trong ngày">Khắc phục ngay trong ngày</option>
-                            <option value="Đang trình xin ý kiến Lãnh đạo">Đang trình xin ý kiến Lãnh đạo</option>
-                            <option value="Cần phối hợp Phòng ban liên quan">Cần phối hợp Phòng ban liên quan</option>
-                            <option value="Khác">Khác (Nhập tự do)...</option>
-                        </select>
-                    </div>
-                </div>
-                <input type="date" id="err_date" class="form-control" style="display:block; margin-bottom:8px;">
-                <input type="text" id="err_date_text" class="form-control" placeholder="Nhập thời hạn / trạng thái xử lý..." style="display:none; margin-bottom:8px;">
-                
-                <label class="input-label">Hình ảnh minh chứng (Chụp trực tiếp hoặc Chọn nhiều ảnh):</label>
+                <label class="input-label">Hình ảnh minh chứng (Chụp trực tiếp hoặc Tải ảnh lên):</label>
                 <div style="display:flex; gap:6px; flex-wrap:wrap; margin-bottom:4px;">
                     <label class="btn-inline-cam" style="flex:1; padding:8px 12px;">
                         📸 Chụp ảnh trực tiếp
                         <input type="file" id="err_img_cam" accept="image/*" capture="environment" style="display:none;" onchange="handleManualErrorImgSelect(event)">
                     </label>
                     <label class="btn-inline-cam gallery" style="flex:1; padding:8px 12px;">
-                        🖼️ Chọn ảnh từ thư viện
+                        🖼️ Tải ảnh từ thư viện
                         <input type="file" id="err_img" accept="image/*" multiple="" style="display:none;" onchange="handleManualErrorImgSelect(event)">
                     </label>
                 </div>
                 <div id="err_staged_imgs_preview" style="display:none; margin-top:6px;"></div>
                 <div style="display:flex; gap:8px; margin-top:8px;">
-                    <button type="button" class="btn-add" id="btn_submit_error" onclick="addError()">+ LƯU HẠNG MỤC TỒN TẠI CSVC TSC</button>
+                    <button type="button" class="btn-add" id="btn_submit_error" onclick="addError()">+ LƯU GHI NHẬN HIỆN TRẠNG</button>
                     <button type="button" class="btn-add" id="btn_cancel_error" style="display:none; background:#64748b; width:auto; padding:10px 18px;" onclick="cancelEditError()">Đóng</button>
                 </div>
             </div>
@@ -1841,16 +1683,16 @@
 
 <!-- NÚT NỔI LÊN ĐẦU TRANG & TỚI LỖI TIẾP THEO -->
 <div class="floating-quick-jump" id="floatingQuickJump">
-    <button type="button" class="btn-float-jump" onclick="jumpToNextIssueRow()" title="Cuộn tới mục lỗi tiếp theo">⚠️</button>
+    <button type="button" class="btn-float-jump" onclick="jumpToNextIssueRow()" title="Cuộn tới mục Không đạt tiếp theo">⚠️</button>
     <button type="button" class="btn-float-jump" onclick="window.scrollTo({top:0, behavior:'smooth'})" title="Lên đầu trang">↑</button>
 </div>
 
 <!-- THANH FLOATING BAR CỐ ĐỊNH DƯỚI ĐÁY -->
 <div class="fab-bar">
     <div class="fab-metrics">
-        <span class="kpi-pill score" id="fab_score_summary">⭐ Điểm: 100/100 (-0đ)</span>
-        <span class="kpi-pill fail">⚠️ Không đạt / Đang xử lý: <span id="count_fail">0</span></span>
-        <span class="kpi-pill prog" id="fab_progress_pill">✔ Đã kiểm: 0/34</span>
+        <span class="kpi-pill score" id="fab_score_summary">✔ Đạt chuẩn: 34/34 (100%)</span>
+        <span class="kpi-pill fail">⚠️ Không đạt: <span id="count_fail">0</span></span>
+        <span class="kpi-pill prog" id="fab_progress_pill">👁️ Đã kiểm: 0/34</span>
     </div>
     <div style="display:flex; gap:6px; align-items:center;">
         <button type="button" class="btn-preview" onclick="openPreview()">🖨 XEM &amp; XUẤT PDF</button>
@@ -1922,7 +1764,7 @@
             <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:12px;">
                 <div style="display:inline-flex; background:#f1f5f9; padding:3px; border-radius:8px; border:1px solid #cbd5e1; flex-wrap:wrap;">
                     <button type="button" class="btn-basket-sm" id="tab_basket_list_btn" style="background:#0f766e; color:#fff; border:none;" onclick="switchBasketModalTab('list')">📋 Phiếu đã lưu</button>
-                    <button type="button" class="btn-basket-sm" id="tab_basket_dash_btn" style="background:transparent; border:none;" onclick="switchBasketModalTab('dashboard')">📊 Thống kê &amp; Top Lỗi</button>
+                    <button type="button" class="btn-basket-sm" id="tab_basket_dash_btn" style="background:transparent; border:none;" onclick="switchBasketModalTab('dashboard')">📊 Thống kê &amp; Top Không đạt</button>
                 </div>
             </div>
             <div id="basketListContainer" style="max-height:58vh; overflow-y:auto;"></div>
@@ -1954,7 +1796,7 @@
 <div class="sample-modal-overlay" id="sampleModal" onclick="if(event.target===this) closeSampleModal()">
     <div class="sample-modal-box">
         <div class="sample-modal-header">
-            <span id="sampleModalTitle">Hình ảnh Quy chuẩn Mẫu</span>
+            <span id="sampleModalTitle">Hình ảnh Minh chứng</span>
             <button type="button" class="sample-modal-close" onclick="closeSampleModal()">×</button>
         </div>
         <div class="sample-modal-body">
@@ -1970,7 +1812,7 @@
     </div>
 </div>
 
-<!-- PRINT PREVIEW SECTION (PHIẾU ĐÁNH GIÁ CHẤT LƯỢNG DỊCH VỤ - CSVC TRỤ SỞ CHÍNH KÈM HEADER) -->
+<!-- PRINT PREVIEW SECTION (PHIẾU ĐÁNH GIÁ CHẤT LƯỢNG DỊCH VỤ - CSVC TRỤ SỞ CHÍNH GỘP GHI NHẬN VÀO CHECKLIST) -->
 <div id="print-section">
     <!-- Thanh tùy chọn thông minh chỉ hiện khi Preview (Tự ẩn khi in PDF) -->
     <div class="preview-top-bar">
@@ -1986,29 +1828,25 @@
                 <input type="checkbox" id="chk_a4_zoom_fit" onchange="togglePreviewOption('a4_zoom', this.checked)">
                 🔍 Tỷ lệ A4
             </label>
-            <label class="preview-opt-label" title="Hiển thị bảng Checklist chi tiết toàn bộ 34 tiêu chí theo mẫu PDF">
-                <input type="checkbox" id="chk_show_full_checklist" checked="" onchange="togglePreviewOption('full_checklist', this.checked)">
-                📋 Bảng 34 Tiêu chí PDF
+            <label class="preview-opt-label" title="Chỉ lọc và in các hạng mục Không đạt trong bảng Checklist">
+                <input type="checkbox" id="chk_only_fail_checklist" onchange="togglePreviewOption('only_fail_checklist', this.checked)">
+                ⚠️ Chỉ hiện mục K.Đạt
             </label>
-            <label class="preview-opt-label" title="Chỉnh kích thước ảnh hiển thị ngay trong bảng">
+            <label class="preview-opt-label" title="Chỉnh kích thước ảnh hiển thị ngay trong bảng Checklist">
                 🖼️ Cỡ ảnh:
                 <select id="sel_report_img_size" onchange="changeReportImageSize(this.value)" style="background:#1e293b; color:#fff; border:1px solid #64748b; border-radius:4px; padding:2px 6px; font-size:11.5px; font-weight:700; cursor:pointer;">
-                    <option value="md">Chuẩn</option>
-                    <option value="lg" selected>Cỡ Lớn</option>
+                    <option value="md" selected>Chuẩn</option>
+                    <option value="lg">Cỡ Lớn</option>
                     <option value="xl">Siêu Lớn</option>
                 </select>
             </label>
             <label class="preview-opt-label" style="background:rgba(16, 185, 129, 0.25); border:1px solid #34d399;" title="Tự động dàn trang Phụ lục ảnh phóng to ở cuối biên bản">
                 <input type="checkbox" id="chk_show_appendix" checked="" onchange="togglePreviewOption('appendix', this.checked)">
-                ➕ Phụ lục ảnh
-            </label>
-            <label class="preview-opt-label" title="Đính kèm trích dẫn Tiêu chuẩn ngay dưới mỗi mục lỗi">
-                <input type="checkbox" id="chk_show_std_quote" checked="" onchange="togglePreviewOption('std_quote', this.checked)">
-                Tiêu chuẩn TSC
+                ➕ Phụ lục ảnh lớn
             </label>
             <label class="preview-opt-label">
-                <input type="checkbox" id="chk_show_sec_overview" checked="" onchange="togglePreviewOption('sec_overview', this.checked)">
-                Bảng 8 KV
+                <input type="checkbox" id="chk_show_sec_overview" onchange="togglePreviewOption('sec_overview', this.checked)">
+                Bảng tóm tắt 8 KV
             </label>
             <label class="preview-opt-label">
                 <input type="checkbox" id="chk_show_images" checked="" onchange="togglePreviewOption('images', this.checked)">
@@ -2018,12 +1856,11 @@
     </div>
 
     <div id="a4_scroll_viewport">
-        <div class="paper img-size-lg" id="a4_paper">
+        <div class="paper img-size-md" id="a4_paper">
             <table class="print-layout-table">
                 <thead>
                     <tr>
                         <td style="padding-bottom: 5px;">
-                            <!-- Ưu tiên hiển thị ảnh Header.jpg giống biểu mẫu cũ, nếu không có ảnh thì tự động hiện Header chuẩn VAB Trụ sở chính -->
                             <div style="margin-bottom: 8px; text-align: center;">
                                 <img src="Header.jpg" id="pdf_header_img" style="max-width: 100%; max-height: 90px; display: inline-block; object-fit: contain;" alt="Header Bản In"
                                      onload="document.getElementById('pdf_header_fallback').style.display='none';"
@@ -2057,57 +1894,39 @@
                                 </tr>
                                 <tr>
                                     <td style="border:none; padding: 2px 0;">Cán bộ đánh giá: <b id="p_user" contenteditable="true" class="editable-print-field"></b></td>
-                                    <td style="border:none; padding: 2px 0;">Xếp loại tuân thủ: <b id="p_rank_label" contenteditable="true" class="editable-print-field"></b></td>
+                                    <td style="border:none; padding: 2px 0;">Kết quả chung: <b id="p_rank_label" contenteditable="true" class="editable-print-field"></b></td>
                                 </tr>
                             </tbody></table>
 
-                            <!-- BẢNG TÓM TẮT KẾT QUẢ ĐIỂM SỐ -->
+                            <!-- BẢNG TÓM TẮT KẾT QUẢ KIỂM TRA (KHÔNG TRỪ ĐIỂM / NHẮC NHỞ) -->
                             <div id="print_summary_board"></div>
 
-                            <!-- BẢNG ĐÁNH GIÁ TỔNG QUAN THEO 8 HẠNG MỤC KHU VỰC TẠI TSC -->
-                            <div id="print_sec_overview_wrap"></div>
+                            <!-- BẢNG ĐÁNH GIÁ TỔNG QUAN THEO 8 HẠNG MỤC KHU VỰC TẠI TSC (TÙY CHỌN BẬT/TẮT) -->
+                            <div id="print_sec_overview_wrap" style="display:none;"></div>
 
-                            <!-- MỤC I: GHI NHẬN CHI TIẾT CÁC HẠNG MỤC CHƯA ĐẠT / ĐANG XỬ LÝ & ĐỀ XUẤT PHƯƠNG ÁN XỬ LÝ -->
-                            <div style="margin-top:14px">
-                                <h4 style="border-bottom:1px solid #000; padding-bottom:4px; text-transform: uppercase; color:#000; margin-bottom: 8px; font-size: 11.5pt;">I. CHI TIẾT HẠNG MỤC GHI NHẬN TỒN TẠI &amp; ĐỀ XUẤT PHƯƠNG ÁN XỬ LÝ</h4>
-                                <table class="report-table" style="margin-top: 5px;" id="print_error_table">
-                                    <thead>
-                                        <tr>
-                                            <th width="28">STT</th>
-                                            <th width="36%">Danh mục kiểm tra, Hiện trạng &amp; Tiêu chuẩn</th>
-                                            <th width="11%">Kết quả / Hình thức</th>
-                                            <th width="20%">Đề xuất phương án xử lý &amp; Thời hạn</th>
-                                            <th width="255" class="col-img-header">Hình ảnh thực tế</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="print_error_body"></tbody>
-                                </table>
-                                <div id="print_error_none" class="no-eval-note" style="text-align:center; display:none;"></div>
-                            </div>
-
-                            <!-- MỤC II: BẢNG CHECKLIST ĐẦY ĐỦ 34 DANH MỤC KIỂM TRA CSVC TRỤ SỞ CHÍNH (ĐÚNG MẪU FILE PDF) -->
-                            <div id="print_full_checklist_wrap" style="margin-top:16px">
-                                <h4 style="border-bottom:1px solid #000; padding-bottom:4px; text-transform: uppercase; color:#000; margin-bottom: 8px; font-size: 11.5pt;">II. BẢNG CHECKLIST CHI TIẾT DANH MỤC KIỂM TRA CSVC TRỤ SỞ CHÍNH</h4>
+                            <!-- BẢNG CHECKLIST ĐẦY ĐỦ DANH MỤC KIỂM TRA CSVC TRỤ SỞ CHÍNH (ĐÃ GỘP HIỆN TRẠNG & ẢNH MINH CHỨNG) -->
+                            <div id="print_full_checklist_wrap" style="margin-top:12px">
+                                <h4 style="border-bottom:1px solid #000; padding-bottom:4px; text-transform: uppercase; color:#000; margin-bottom: 8px; font-size: 11.5pt;">DANH MỤC KIỂM TRA &amp; GHI NHẬN HIỆN TRẠNG CƠ SỞ VẬT CHẤT TẠI TRỤ SỞ CHÍNH</h4>
                                 <table class="report-table" style="margin-top: 5px;">
                                     <thead>
                                         <tr>
-                                            <th width="36" rowspan="2">Stt</th>
-                                            <th width="21%" rowspan="2">Danh mục kiểm tra</th>
-                                            <th width="29%" rowspan="2">Tiêu chuẩn</th>
+                                            <th width="34" rowspan="2">Stt</th>
+                                            <th width="18%" rowspan="2">Danh mục kiểm tra</th>
+                                            <th width="25%" rowspan="2">Tiêu chuẩn</th>
                                             <th colspan="3">Kết quả</th>
-                                            <th width="24%" rowspan="2">Hiện trạng và đề xuất phương án xử lý<br><small style="font-weight:normal;">(đối với hạng mục “không đạt”)</small></th>
+                                            <th width="34%" rowspan="2">Hiện trạng, đề xuất phương án xử lý &amp; Hình ảnh thực tế<br><small style="font-weight:normal;">(đối với hạng mục “không đạt”)</small></th>
                                         </tr>
                                         <tr>
-                                            <th width="7%">Không đánh giá</th>
-                                            <th width="6%">Đạt</th>
-                                            <th width="8%">Không đạt</th>
+                                            <th width="6.5%">Không đánh giá</th>
+                                            <th width="5.5%">Đạt</th>
+                                            <th width="7%">Không đạt</th>
                                         </tr>
                                     </thead>
                                     <tbody id="print_full_checklist_body"></tbody>
                                 </table>
                             </div>
 
-                            <!-- PHẦN Ý KIẾN & CHỮ KÝ (CÓ HỖ TRỢ KÝ TÊN ĐIỆN TỬ TRÊN MÀN HÌNH) -->
+                            <!-- PHẦN Ý KIẾN & CHỮ KÝ -->
                             <div class="signature-container" style="margin-top: 14px;">
                                 <div class="signature-block">
                                     <b>Ý KIẾN CỦA CÁN BỘ ĐÁNH GIÁ:</b><br>
@@ -2293,6 +2112,7 @@
     let currentLinkedCriteriaId = null;
     let isFilterIssuesOnly = false;
     let isFilterUnverifiedOnly = false;
+    let isOnlyFailChecklistPrint = false;
     let currentSearchQuery = '';
     let currentActiveTab = 1;
     let signaturesData = { manager: null, evaluator: null };
@@ -2391,6 +2211,7 @@
         }
     }
 
+    // KHUNG GHI NHẬN HIỆN TRẠNG KHI BẤM "KHÔNG ĐẠT" (ĐÃ BỎ TRỪ ĐIỂM & NHẮC NHỞ)
     function createInlineIssueDrawer(id, label) {
         const quickTags = getContextQuickTags(id, label);
         const chipsHtml = quickTags.map(t => `<button type="button" class="quick-chip-btn" onclick="appendQuickIssueNote('${id}', '${t}')">+ ${t}</button>`).join('');
@@ -2402,58 +2223,25 @@
                 ${chipsHtml}
             </div>
             <div class="voice-input-group">
-                <input type="text" id="inote_${id}" class="drawer-input" placeholder="✍️ Nhập hiện trạng thực tế ghi nhận tại TSC (chạm gợi ý hoặc gõ)..." oninput="onInlineIssueChange('${id}')">
+                <input type="text" id="inote_${id}" class="drawer-input" placeholder="✍️ Mô tả ghi nhận hiện trạng thực tế (chạm gợi ý phía trên hoặc nhập trực tiếp)..." oninput="onInlineIssueChange('${id}')">
             </div>
             <div class="drawer-bottom-bar">
-                <div class="drawer-controls-left">
-                    <select id="itype_${id}" class="drawer-select" onchange="onInlineTypeChange('${id}')">
-                        <option value="Ghi nhận trừ điểm tuân thủ">🔴 Trừ điểm</option>
-                        <option value="Nhắc nhở (không trừ điểm)">🟡 Nhắc nhở</option>
-                        <option value="Theo dõi">🔵 Theo dõi</option>
-                    </select>
-                    <select id="ipt_${id}" class="drawer-select deduct" onchange="onInlineIssueChange('${id}')">
-                        <option value="Trừ 1 điểm">-1 điểm</option>
-                        <option value="Trừ 2 điểm">-2 điểm</option>
-                        <option value="Trừ 3 điểm">-3 điểm</option>
-                        <option value="Trừ 4 điểm">-4 điểm</option>
-                        <option value="Trừ 5 điểm">-5 điểm</option>
-                    </select>
-                    <select id="irmd_${id}" class="drawer-select" style="display:none;" onchange="onInlineIssueChange('${id}')">
-                        <option value="Lần 1">Nhắc Lần 1</option>
-                        <option value="Lần 2">Nhắc Lần 2</option>
-                        <option value="Lần 3">Nhắc Lần 3</option>
-                    </select>
-                    <select id="idtype_${id}" class="drawer-select" onchange="onInlineDateTypeChange('${id}')">
-                        <option value="date">📅 Hạn xử lý</option>
-                        <option value="Khắc phục ngay trong ngày">⚡ Khắc phục ngay</option>
-                        <option value="Đang trình xin ý kiến Lãnh đạo">⏳ Trình Lãnh đạo</option>
-                        <option value="Cần phối hợp Phòng ban liên quan">🏢 Phối hợp P.Ban</option>
-                    </select>
-                    <input type="date" id="idate_${id}" class="drawer-select" onchange="onInlineIssueChange('${id}')">
-                </div>
-                <div style="display:flex; gap:5px; align-items:center; justify-content:space-between; width:100%;">
-                    <button type="button" class="drawer-adv-toggle" onclick="toggleDrawerAdv('${id}')">⚙️ Đề xuất phương án xử lý &amp; Hạn nhanh</button>
-                    <div style="display:inline-flex; gap:5px; align-items:center;">
+                <div style="display:flex; gap:6px; align-items:center; justify-content:space-between; width:100%; flex-wrap:wrap;">
+                    <div style="display:inline-flex; gap:6px; align-items:center; flex-wrap:wrap;">
                         <label class="btn-inline-cam" title="Mở máy ảnh chụp trực tiếp">
-                            📸 Chụp
+                            📸 Chụp ảnh
                             <input type="file" accept="image/*" capture="environment" style="display:none;" onchange="handleInlineImgUpload('${id}', event)">
                         </label>
                         <label class="btn-inline-cam gallery" title="Chọn một hoặc nhiều ảnh từ thư viện">
-                            🖼️ Ảnh (<span id="icam_cnt_${id}">0</span>)
+                            🖼️ Tải ảnh lên (<span id="icam_cnt_${id}">0</span>)
                             <input type="file" accept="image/*" multiple style="display:none;" onchange="handleInlineImgUpload('${id}', event)">
                         </label>
                     </div>
+                    <button type="button" class="drawer-adv-toggle" onclick="toggleDrawerAdv('${id}')">🛠 Đề xuất phương án xử lý ▾</button>
                 </div>
             </div>
             <div class="drawer-adv-box" id="d_adv_${id}">
-                <input type="text" id="isol_${id}" class="drawer-input" style="margin-bottom:6px;" placeholder="🛠 Đề xuất phương án xử lý" value="Đề nghị bộ phận phụ trách kiểm tra, khắc phục theo đúng tiêu chuẩn TSC." oninput="onInlineIssueChange('${id}')">
-                <div class="deadline-quick-pills" id="dl_pills_${id}">
-                    <span style="font-size:11px; color:#64748b; font-weight:600;">Chọn nhanh hạn:</span>
-                    <button type="button" class="btn-dl-chip" onclick="setQuickDeadlineOffset('${id}', 0)">Hôm nay</button>
-                    <button type="button" class="btn-dl-chip" onclick="setQuickDeadlineOffset('${id}', 3)">+3 ngày</button>
-                    <button type="button" class="btn-dl-chip" onclick="setQuickDeadlineOffset('${id}', 7)">+7 ngày</button>
-                    <button type="button" class="btn-dl-chip" onclick="setQuickDeadlineOffset('${id}', 15)">+15 ngày</button>
-                </div>
+                <input type="text" id="isol_${id}" class="drawer-input" placeholder="🛠 Nhập đề xuất phương án xử lý / khắc phục (nếu có)..." value="" oninput="onInlineIssueChange('${id}')">
             </div>
             <div class="inline-thumbs" id="ithumbs_${id}"></div>
         </div>`;
@@ -2471,10 +2259,6 @@
                     <span class="item-short-title" id="short_lbl_${id}" onclick="toggleVerifiedCriterion('${id}')" style="cursor:pointer;" title="Chạm để đánh dấu/bỏ đánh dấu Đã kiểm thực tế">${shortTitle}:</span>
                     <span class="item-spec-inline">${item.spec}</span>
                     <span class="verified-badge" id="ver_badge_${id}" onclick="toggleVerifiedCriterion('${id}')" title="Chạm để bỏ đánh dấu Đã kiểm">✓ Đã kiểm</span>
-                    <button type="button" class="btn-eye-sample" id="btn_sample_${id}" onclick="openSampleModal('${id}')" title="Xem hoặc tải ảnh mẫu tiêu chuẩn">
-                        <svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
-                        Mẫu
-                    </button>
                 </div>
                 <div class="btn-group">
                     <button type="button" class="btn-eval pass active" onclick="setRate('${id}', 'Đạt', this)">✔ Đạt</button>
@@ -2520,7 +2304,7 @@
             }
         });
 
-        document.getElementById('csvc_topbar_mount').innerHTML = createSectionTopBar('csvc', 'TỔNG HỢP CÁC HẠNG MỤC KHÔNG ĐẠT / ĐANG XỬ LÝ TẠI TRỤ SỞ CHÍNH');
+        document.getElementById('csvc_topbar_mount').innerHTML = createSectionTopBar('csvc', 'TỔNG HỢP GHI NHẬN HIỆN TRẠNG CÁC HẠNG MỤC KHÔNG ĐẠT TẠI TRỤ SỞ CHÍNH');
         initCollapsibleSubHeaders();
     }
 
@@ -2570,12 +2354,12 @@
                 if (!st) return;
                 const rowId = st.getAttribute('data-id');
                 if (verifiedCriteriaMap[rowId]) verified++;
-                if (st.value === 'Không đạt' || st.value === 'Đang khắc phục') issues++;
+                if (st.value === 'Không đạt') issues++;
             });
             const badge = document.getElementById('badge_' + subId);
             if (badge) {
                 if (issues > 0) {
-                    badge.innerText = `${issues} lỗi • Đã kiểm ${verified}/${rows.length}`;
+                    badge.innerText = `${issues} K.Đạt • Đã kiểm ${verified}/${rows.length}`;
                     badge.classList.add('has-err');
                 } else {
                     badge.innerText = `Đạt (${verified}/${rows.length})`;
@@ -2613,48 +2397,6 @@
         }
     }
 
-    function getOffsetDateISO(daysOffset) {
-        const baseDateStr = document.getElementById('inp_date')?.value;
-        const baseDate = baseDateStr ? new Date(baseDateStr) : new Date();
-        baseDate.setDate(baseDate.getDate() + daysOffset);
-        return baseDate.toISOString().slice(0, 10);
-    }
-
-    function setQuickDeadlineOffset(id, days) {
-        const dtSelect = document.getElementById('idtype_' + id);
-        const dInput = document.getElementById('idate_' + id);
-        if (dtSelect) dtSelect.value = 'date';
-        if (dInput) {
-            dInput.style.display = 'inline-block';
-            dInput.value = getOffsetDateISO(days);
-        }
-        onInlineIssueChange(id);
-        showToast(`📅 Đã đặt hạn khắc phục: ${days === 0 ? 'Hôm nay' : '+' + days + ' ngày'}!`);
-    }
-
-    function applyBatchDeadlineToAllErrors() {
-        const batchDate = document.getElementById('batch_error_date_inp')?.value;
-        if (!batchDate) {
-            showToast("⚠ Vui lòng chọn ngày muốn đồng bộ trước khi bấm Áp dụng!");
-            return;
-        }
-        const formatted = batchDate.split('-').reverse().join('/');
-        errorList.forEach(err => {
-            err.date = formatted;
-            if (err.linkedCriteriaId) {
-                const lid = err.linkedCriteriaId;
-                if (document.getElementById('idtype_' + lid)) document.getElementById('idtype_' + lid).value = 'date';
-                if (document.getElementById('idate_' + lid)) {
-                    document.getElementById('idate_' + lid).style.display = 'inline-block';
-                    document.getElementById('idate_' + lid).value = batchDate;
-                }
-            }
-        });
-        renderErrors();
-        saveDraft();
-        showToast(`📅 Đã đồng bộ hạn xử lý (${formatted}) cho toàn bộ ${errorList.length} mục lỗi!`);
-    }
-
     function toggleVerifiedCriterion(id, forceState) {
         const newState = (forceState !== undefined) ? forceState : !verifiedCriteriaMap[id];
         verifiedCriteriaMap[id] = newState;
@@ -2679,7 +2421,7 @@
     function jumpToNextIssueRow() {
         const issueRows = Array.from(document.querySelectorAll('.row-item.is-issue-row')).filter(r => r.offsetParent !== null);
         if (issueRows.length === 0) {
-            showToast("✔ Không có mục lỗi nào trong khu vực đang mở!");
+            showToast("✔ Không có mục Không đạt nào trong khu vực đang mở!");
             return;
         }
         const nextRow = issueRows.find(r => r.getBoundingClientRect().top > 120) || issueRows[0];
@@ -2753,22 +2495,6 @@
         const box = document.getElementById('manual_error_form_box');
         if (!box) return;
         box.style.display = (box.style.display === 'none') ? 'block' : 'none';
-    }
-
-    function openSampleModal(id) {
-        currentSampleId = id;
-        const meta = CRITERIA_LOOKUP[id];
-        const descText = meta ? `<b>${meta.stt} ${meta.name}:</b> ${meta.spec}` : ('Tiêu chí ' + id);
-        document.getElementById('sampleModalTitle').innerText = 'Tiêu chuẩn mẫu TSC - Mục ' + (meta ? meta.stt : id.replace(/_/g, '.'));
-        document.getElementById('sampleModalDesc').style.display = 'block';
-        document.getElementById('sampleModalDesc').innerHTML = descText;
-        document.getElementById('sampleModalUploadWrap').style.display = 'block';
-
-        let savedImg = null;
-        try { savedImg = localStorage.getItem('cldv_tsc_sample_' + id); } catch (e) {}
-        const imgSrc = savedImg || `https://placehold.co/520x280/eff6ff/1e40af?text=Mau+Tieu+Chuan+TSC+Muc+${meta ? meta.stt : id}`;
-        document.getElementById('sampleModalImgBox').innerHTML = `<img src="${imgSrc}" alt="Ảnh mẫu tiêu chí ${id}">`;
-        document.getElementById('sampleModal').style.display = 'flex';
     }
 
     function openReportImageLightbox(imgSrc, caption) {
@@ -2933,7 +2659,7 @@
             saveDraft();
         }
         closeAnnotatorModal();
-        showToast("🖍️ Đã lưu hình ảnh kèm nét khoanh đánh dấu lỗi!");
+        showToast("🖍️ Đã lưu hình ảnh kèm nét khoanh đánh dấu!");
     }
 
     // === CHỮ KÝ ĐIỆN TỬ TRÊN BIÊN BẢN ===
@@ -3009,20 +2735,20 @@
         const m = calculateScoreMetrics();
         const activeErrs = getActiveErrorList();
 
-        let text = `Qua kiểm tra thực tế Chất lượng dịch vụ - Cơ sở vật chất tại ${dvkd}, Điểm tuân thủ đạt ${m.remainingScore}/100 điểm (${m.rankLabel}; tỷ lệ đạt chuẩn ${m.complianceRate}%). `;
+        let text = `Qua kiểm tra thực tế Chất lượng dịch vụ - Cơ sở vật chất tại ${dvkd}, ghi nhận ${m.passedCount}/${m.totalApplicable} hạng mục Đạt chuẩn (tỷ lệ đạt ${m.complianceRate}%). `;
 
         if (activeErrs.length === 0) {
             text += `Tất cả các khu vực kiểm tra tại Trụ Sở Chính (Không gian chung, Sảnh/Lễ tân, Khu vực làm việc, Phòng họp, Nhà ăn CBNV, Khu vực WC, Hệ thống điện & PCCC, An ninh) đều sạch sẽ, gọn gàng, trang thiết bị hoạt động tốt và đảm bảo đúng tiêu chuẩn quy định.`;
         } else {
-            text += `Ghi nhận ${activeErrs.length} hạng mục cần khắc phục/xử lý (trong đó trừ ${m.totalDeductPoints} điểm tuân thủ, nhắc nhở ${m.failRemindCount} mục, đang xử lý/theo dõi ${m.followUpCount} mục). Đề nghị Bộ phận Quản lý / Hành chính TSC và các đơn vị liên quan phối hợp xử lý dứt điểm các hạng mục đã nêu trong phiếu đúng thời hạn.`;
+            text += `Ghi nhận ${activeErrs.length} hạng mục Không đạt cần kiểm tra, xử lý khắc phục (chi tiết hiện trạng và hình ảnh thực tế tại bảng Checklist). Đề nghị Bộ phận Quản lý / Hành chính TSC và các đơn vị liên quan phối hợp xử lý các hạng mục đã ghi nhận.`;
         }
         document.getElementById('inp_evaluator').value = text;
         saveDraft();
-        showToast("✨ Đã tự động tổng hợp nhận xét dựa trên kết quả chấm TSC!");
+        showToast("✨ Đã tự động tổng hợp nhận xét dựa trên kết quả kiểm tra!");
     }
 
     function generateDefaultManagerResponse() {
-        const text = `Thống nhất với các nội dung ghi nhận thực tế của Cán bộ đánh giá tại Trụ Sở Chính; Bộ phận Quản lý / Hành chính tiếp nhận và phối hợp các đơn vị liên quan triển khai xử lý, khắc phục đúng thời hạn.`;
+        const text = `Thống nhất với các nội dung ghi nhận hiện trạng thực tế của Cán bộ đánh giá tại Trụ Sở Chính; Bộ phận Quản lý / Hành chính tiếp nhận và phối hợp các đơn vị liên quan triển khai xử lý, khắc phục.`;
         document.getElementById('inp_manager').value = text;
         saveDraft();
         showToast("✔ Đã điền mẫu tiếp nhận xử lý của TSC!");
@@ -3066,18 +2792,6 @@
         event.target.value = "";
     }
 
-    function toggleErrDetail() {
-        let type = document.getElementById('err_type').value;
-        document.getElementById('err_detail_point_container').style.display = (type === 'Ghi nhận trừ điểm tuân thủ') ? 'block' : 'none';
-        document.getElementById('err_detail_remind_container').style.display = (type === 'Nhắc nhở (không trừ điểm)') ? 'block' : 'none';
-    }
-
-    function toggleDateInput() {
-        let type = document.getElementById('err_date_type').value;
-        document.getElementById('err_date').style.display = (type === 'date') ? 'block' : 'none';
-        document.getElementById('err_date_text').style.display = (type === 'Khác') ? 'block' : 'none';
-    }
-
     function extractCriteriaItemName(rowId) {
         const meta = CRITERIA_LOOKUP[rowId];
         if (meta) return `${meta.stt} ${meta.name}`;
@@ -3095,11 +2809,7 @@
         return 'Hạng mục kiểm tra TSC';
     }
 
-    const DEFAULT_SOL_FAIL = 'Đề nghị bộ phận phụ trách kiểm tra, khắc phục theo đúng tiêu chuẩn TSC.';
-    const DEFAULT_SOL_PENDING = 'Đang phối hợp triển khai xử lý, tiếp tục theo dõi tiến độ hoàn thành.';
-
     function setRate(id, value, btn) {
-        const prevVal = document.getElementById('s_' + id)?.value || 'Đạt';
         document.getElementById('s_' + id).value = value;
         const rowBox = document.getElementById('row_box_' + id);
         let parent = btn.parentElement;
@@ -3109,106 +2819,27 @@
         verifiedCriteriaMap[id] = true;
         if (rowBox) rowBox.classList.add('is-verified-row');
 
-        const isIssue = (value === 'Không đạt' || value === 'Đang khắc phục');
+        const isIssue = (value === 'Không đạt');
         if (rowBox) rowBox.classList.toggle('is-issue-row', isIssue);
 
         let failSub = document.getElementById('fail_sub_' + id);
         if (failSub) {
             failSub.style.display = isIssue ? 'flex' : 'none';
-            failSub.classList.toggle('pending-mode', value === 'Đang khắc phục');
         }
 
-        const itype = document.getElementById('itype_' + id);
-        const isol = document.getElementById('isol_' + id);
-        const idtype = document.getElementById('idtype_' + id);
-        const idate = document.getElementById('idate_' + id);
-
         if (isIssue) {
-            if (value === 'Không đạt' && prevVal !== 'Không đạt') {
-                if (itype && itype.value === 'Theo dõi') {
-                    itype.value = 'Ghi nhận trừ điểm tuân thủ';
-                }
-                if (isol && (isol.value.trim() === '' || isol.value.trim() === DEFAULT_SOL_PENDING)) {
-                    isol.value = DEFAULT_SOL_FAIL;
-                }
-                if (idtype && prevVal === 'Đang khắc phục' && idtype.value === 'Cần phối hợp Phòng ban liên quan') {
-                    idtype.value = 'date';
-                }
-                if (idtype && idtype.value === 'date' && idate && !idate.value) {
-                    idate.value = getOffsetDateISO(7);
-                }
-
-                onInlineTypeChange(id, true);
-                onInlineDateTypeChange(id, true);
-            } else if (value === 'Đang khắc phục' && prevVal !== 'Đang khắc phục') {
-                if (itype) {
-                    itype.value = 'Theo dõi';
-                }
-                if (isol && (isol.value.trim() === '' || isol.value.trim() === DEFAULT_SOL_FAIL)) {
-                    isol.value = DEFAULT_SOL_PENDING;
-                }
-                if (idtype && idtype.value === 'date' && (!idate || !idate.value)) {
-                    idtype.value = 'Cần phối hợp Phòng ban liên quan';
-                }
-                onInlineTypeChange(id, true);
-                onInlineDateTypeChange(id, true);
-            }
             syncInlineRowToErrorList(id);
+            const noteInput = document.getElementById('inote_' + id);
+            if (noteInput && !noteInput.value) {
+                setTimeout(() => noteInput.focus(), 80);
+            }
         } else {
-            if (isol && isol.value.trim() === DEFAULT_SOL_PENDING) {
-                isol.value = DEFAULT_SOL_FAIL;
-            }
-            if (itype && itype.value === 'Theo dõi') {
-                itype.value = 'Ghi nhận trừ điểm tuân thủ';
-                onInlineTypeChange(id, true);
-            }
-            if (idtype && idtype.value === 'Cần phối hợp Phòng ban liên quan') {
-                idtype.value = 'date';
-                onInlineDateTypeChange(id, true);
-            }
             removeInlineRowFromErrorList(id);
         }
 
         countFail();
         saveDraft();
         if (isFilterIssuesOnly || isFilterUnverifiedOnly || currentSearchQuery) applyFilterIssuesView();
-    }
-
-    function onInlineTypeChange(id, skipSync) {
-        const typeEl = document.getElementById('itype_' + id);
-        const ptEl = document.getElementById('ipt_' + id);
-        const rmdEl = document.getElementById('irmd_' + id);
-        const isol = document.getElementById('isol_' + id);
-        const idtype = document.getElementById('idtype_' + id);
-        if (!typeEl || !ptEl || !rmdEl) return;
-
-        ptEl.style.display = (typeEl.value === 'Ghi nhận trừ điểm tuân thủ') ? 'inline-block' : 'none';
-        rmdEl.style.display = (typeEl.value === 'Nhắc nhở (không trừ điểm)') ? 'inline-block' : 'none';
-
-        if (!skipSync && isol) {
-            if (typeEl.value === 'Theo dõi' && isol.value.trim() === DEFAULT_SOL_FAIL) {
-                isol.value = DEFAULT_SOL_PENDING;
-            } else if (typeEl.value !== 'Theo dõi' && isol.value.trim() === DEFAULT_SOL_PENDING) {
-                isol.value = DEFAULT_SOL_FAIL;
-                if (idtype && idtype.value === 'Cần phối hợp Phòng ban liên quan') {
-                    idtype.value = 'date';
-                    onInlineDateTypeChange(id, true);
-                }
-            }
-        }
-
-        if (!skipSync) onInlineIssueChange(id);
-    }
-
-    function onInlineDateTypeChange(id, skipSync) {
-        const dtEl = document.getElementById('idtype_' + id);
-        const dInput = document.getElementById('idate_' + id);
-        const dlPills = document.getElementById('dl_pills_' + id);
-        if (!dtEl || !dInput) return;
-        const isDateMode = (dtEl.value === 'date');
-        dInput.style.display = isDateMode ? 'inline-block' : 'none';
-        if (dlPills) dlPills.style.display = isDateMode ? 'inline-flex' : 'none';
-        if (!skipSync) onInlineIssueChange(id);
     }
 
     function handleInlineImgUpload(id, event) {
@@ -3218,27 +2849,16 @@
         if (!inlineCriteriaOrigImages[id]) inlineCriteriaOrigImages[id] = [];
         if (!inlineCriteriaImgTags[id]) inlineCriteriaImgTags[id] = [];
 
-        const dtType = document.getElementById('idtype_' + id)?.value || '';
-        const defaultTag = (dtType === 'Khắc phục ngay trong ngày' && inlineCriteriaImages[id].length > 0) ? 'Sau KP' : 'Trước KP';
-
         let promises = Array.from(files).map(f => new Promise(res => compressImage(f, 1000, 0.72, res, true)));
         Promise.all(promises).then(newImgs => {
             inlineCriteriaImages[id] = inlineCriteriaImages[id].concat(newImgs);
             inlineCriteriaOrigImages[id] = inlineCriteriaOrigImages[id].concat(newImgs);
-            newImgs.forEach(() => inlineCriteriaImgTags[id].push(defaultTag));
+            newImgs.forEach(() => inlineCriteriaImgTags[id].push('Hiện trạng'));
             renderInlineThumbs(id);
             onInlineIssueChange(id);
-            showToast(`📷 Đã đính kèm ${newImgs.length} ảnh (chạm nhãn để đổi Trước/Sau KP, chạm ảnh để vẽ)`);
+            showToast(`📷 Đã đính kèm ${newImgs.length} ảnh hiện trạng (chạm ảnh để vẽ khoanh đỏ)`);
         });
         event.target.value = "";
-    }
-
-    function toggleInlineImgTag(id, idx) {
-        if (!inlineCriteriaImgTags[id]) inlineCriteriaImgTags[id] = [];
-        const cur = inlineCriteriaImgTags[id][idx] || 'Trước KP';
-        inlineCriteriaImgTags[id][idx] = (cur === 'Trước KP') ? 'Sau KP' : 'Trước KP';
-        renderInlineThumbs(id);
-        onInlineIssueChange(id);
     }
 
     function removeInlineThumb(id, idx) {
@@ -3252,18 +2872,14 @@
 
     function renderInlineThumbs(id) {
         const imgs = inlineCriteriaImages[id] || [];
-        const tags = inlineCriteriaImgTags[id] || [];
         const cntEl = document.getElementById('icam_cnt_' + id);
         const thumbsEl = document.getElementById('ithumbs_' + id);
         if (cntEl) cntEl.innerText = imgs.length;
         if (!thumbsEl) return;
         thumbsEl.innerHTML = imgs.map((src, i) => {
-            const tag = tags[i] || 'Trước KP';
-            const isAfter = tag === 'Sau KP';
             return `
             <div class="inline-thumb-wrap" title="Chạm vào ảnh để vẽ khoanh đỏ vị trí lỗi">
                 <img src="${src}" onclick="openAnnotatorModal('inline', '${id}', ${i})">
-                <button type="button" class="inline-thumb-tag ${isAfter ? 'after' : ''}" onclick="toggleInlineImgTag('${id}', ${i})" title="Chạm để đổi nhãn Trước KP / Sau KP">${tag}</button>
                 <button type="button" class="inline-thumb-edit" onclick="openAnnotatorModal('inline', '${id}', ${i})">🖍️ Vẽ</button>
                 <button type="button" class="inline-thumb-del" onclick="removeInlineThumb('${id}', ${i})">×</button>
             </div>
@@ -3278,7 +2894,7 @@
 
     function syncInlineRowToErrorList(id) {
         const val = document.getElementById('s_' + id) ? document.getElementById('s_' + id).value : 'Đạt';
-        if (val !== 'Không đạt' && val !== 'Đang khắc phục') {
+        if (val !== 'Không đạt') {
             removeInlineRowFromErrorList(id);
             return;
         }
@@ -3288,25 +2904,8 @@
         const stdReqText = getCriteriaStandardRequirement(id);
         const noteVal = (document.getElementById('inote_' + id)?.value || '').trim();
         const solVal = (document.getElementById('isol_' + id)?.value || '').trim();
-        const typeVal = document.getElementById('itype_' + id)?.value || 'Ghi nhận trừ điểm tuân thủ';
 
-        let detailVal = '';
-        if (typeVal === 'Ghi nhận trừ điểm tuân thủ') {
-            detailVal = document.getElementById('ipt_' + id)?.value || 'Trừ 1 điểm';
-        } else if (typeVal === 'Nhắc nhở (không trừ điểm)') {
-            detailVal = document.getElementById('irmd_' + id)?.value || 'Lần 1';
-        }
-
-        const dtType = document.getElementById('idtype_' + id)?.value || 'date';
-        let dateFormatted = '';
-        if (dtType === 'date') {
-            const rawD = document.getElementById('idate_' + id)?.value || '';
-            dateFormatted = rawD ? rawD.split('-').reverse().join('/') : '';
-        } else {
-            dateFormatted = dtType;
-        }
-
-        const actualNote = noteVal || (val === 'Đang khắc phục' ? 'Đang trong quá trình xử lý / khắc phục' : 'Chưa đảm bảo đúng tiêu chuẩn quy định');
+        const actualNote = noteVal || 'Chưa đảm bảo đúng tiêu chuẩn quy định';
         const fullDesc = `[${areaTitle}] ${cleanItemName}: ${actualNote}`;
         const imgs = inlineCriteriaImages[id] ? [...inlineCriteriaImages[id]] : [];
         const imgTags = inlineCriteriaImgTags[id] ? [...inlineCriteriaImgTags[id]] : [];
@@ -3317,11 +2916,8 @@
             itemTitle: cleanItemName,
             actualIssue: actualNote,
             stdSpec: stdReqText,
-            evalState: val,
-            solution: solVal || DEFAULT_SOL_FAIL,
-            type: typeVal,
-            detail: detailVal,
-            date: dateFormatted,
+            evalState: 'Không đạt',
+            solution: solVal,
             imgs: imgs,
             imgTags: imgTags,
             linkedCriteriaId: id
@@ -3344,34 +2940,14 @@
         }
     }
 
-    // === TÍNH ĐIỂM TUÂN THỦ CHUẨN LOGIC TRỤ SỞ CHÍNH ===
+    // === TÍNH KẾT QUẢ KIỂM TRA (KHÔNG TRỪ ĐIỂM / NHẮC NHỞ) ===
     function calculateScoreMetrics() {
         let totalApplicable = 0;
         let totalNA = 0;
         let passedCount = 0;
         let totalFail = 0;
-        let pendingCount = 0;
-
-        let csvcDeductPoints = 0;
-        let failDeductCount = 0;
-        let failRemindCount = 0;
-        let followUpCount = 0;
 
         const activeErrList = getActiveErrorList();
-        activeErrList.forEach(err => {
-            if (err.type === 'Ghi nhận trừ điểm tuân thủ') {
-                failDeductCount++;
-                if (err.detail) {
-                    const match = err.detail.match(/(\d+)/);
-                    if (match) csvcDeductPoints += parseInt(match[1], 10);
-                }
-            } else if (err.type === 'Nhắc nhở (không trừ điểm)') {
-                failRemindCount++;
-            } else {
-                followUpCount++;
-            }
-        });
-
         const secStats = [];
 
         TSC_SECTIONS.forEach((sec) => {
@@ -3382,7 +2958,7 @@
 
             if (!stEl || stEl.value !== 'Yes') {
                 if (badgeEl) {
-                    badgeEl.innerText = 'Không đánh giá';
+                    badgeEl.innerText = 'Không ĐG';
                     badgeEl.classList.remove('has-fail');
                 }
                 secStats.push({
@@ -3390,7 +2966,7 @@
                     fullTitle: sec.title,
                     evaluated: false,
                     reason: reasonVal,
-                    total: 0, pass: 0, pending: 0, fail: 0, na: 0,
+                    total: 0, pass: 0, fail: 0, na: 0,
                     issueNames: []
                 });
                 return;
@@ -3401,7 +2977,7 @@
 
             let secIssueCount = 0;
             let secTotalCount = 0;
-            let sPass = 0, sPend = 0, sFail = 0, sNA = 0;
+            let sPass = 0, sFail = 0, sNA = 0;
             let issueNames = [];
 
             container.querySelectorAll('.val-storage').forEach(el => {
@@ -3416,11 +2992,6 @@
                     if (val === 'Đạt') {
                         passedCount++;
                         sPass++;
-                    } else if (val === 'Đang khắc phục') {
-                        pendingCount++;
-                        secIssueCount++;
-                        sPend++;
-                        issueNames.push(extractCriteriaItemName(rowId));
                     } else if (val === 'Không đạt') {
                         totalFail++;
                         secIssueCount++;
@@ -3437,7 +3008,6 @@
                 reason: '',
                 total: secTotalCount,
                 pass: sPass,
-                pending: sPend,
                 fail: sFail,
                 na: sNA,
                 issueNames: issueNames
@@ -3445,7 +3015,7 @@
 
             if (badgeEl) {
                 if (secIssueCount > 0) {
-                    badgeEl.innerText = `${secIssueCount} lỗi`;
+                    badgeEl.innerText = `${secIssueCount} K.Đạt`;
                     badgeEl.classList.add('has-fail');
                 } else {
                     badgeEl.innerText = `Đạt`;
@@ -3460,27 +3030,21 @@
             badge9.classList.toggle('has-fail', activeErrList.length > 0);
         }
 
-        const baseScore = 100;
-        const totalDeductPoints = csvcDeductPoints;
-        const remainingScore = Math.max(0, baseScore - totalDeductPoints);
         const complianceRate = totalApplicable > 0 ? Math.round((passedCount / totalApplicable) * 100) : 100;
 
-        let rankLabel = "Đạt chuẩn Tốt (≥ 95 điểm)";
-        if (remainingScore < 75) rankLabel = "Cần chấn chỉnh & khắc phục (< 75 điểm)";
-        else if (remainingScore < 85) rankLabel = "Đạt mức Khá (75 - 84 điểm)";
-        else if (remainingScore < 95) rankLabel = "Đạt mức Tốt (85 - 94 điểm)";
+        let rankLabel = `Đạt ${passedCount}/${totalApplicable} mục (${complianceRate}%)`;
+        if (activeErrList.length > 0) {
+            rankLabel += ` — ${activeErrList.length} mục Không đạt`;
+        } else {
+            rankLabel += ` — Đạt chuẩn 100%`;
+        }
 
         return {
             totalApplicable,
             totalNA,
             passedCount,
-            failDeductCount,
-            failRemindCount,
-            followUpCount,
             totalFail,
-            pendingCount,
-            totalDeductPoints,
-            remainingScore,
+            activeIssueCount: activeErrList.length,
             complianceRate,
             rankLabel,
             secStats
@@ -3489,26 +3053,16 @@
 
     function countFail() {
         const m = calculateScoreMetrics();
-        const totalIssues = m.totalFail + m.pendingCount;
-        let info = `${totalIssues}`;
         const isSmallMobile = window.innerWidth <= 640;
-        let details = [];
-        if (!isSmallMobile) {
-            if (m.failDeductCount > 0) details.push(`Trừ điểm: ${m.failDeductCount}`);
-            if (m.failRemindCount > 0) details.push(`Nhắc: ${m.failRemindCount}`);
-            if (m.pendingCount > 0) details.push(`Đang xử lý: ${m.pendingCount}`);
-            if (details.length > 0) {
-                info += ` (${details.join(' • ')})`;
-            }
-        }
+
         const failEl = document.getElementById('count_fail');
-        if (failEl) failEl.innerText = info;
+        if (failEl) failEl.innerText = `${m.activeIssueCount}`;
 
         const fabScore = document.getElementById('fab_score_summary');
         if (fabScore) {
             fabScore.innerText = isSmallMobile
-                ? `⭐ ${m.remainingScore}/100 (-${m.totalDeductPoints}đ)`
-                : `⭐ Điểm CLDV TSC: ${m.remainingScore}/100 (Trừ: -${m.totalDeductPoints}đ)`;
+                ? `✔ Đạt: ${m.passedCount}/${m.totalApplicable} (${m.complianceRate}%)`
+                : `✔ Kết quả: Đạt ${m.passedCount}/${m.totalApplicable} hạng mục (${m.complianceRate}%)`;
         }
 
         let totalActiveRows = 0;
@@ -3529,11 +3083,11 @@
 
         const progPill = document.getElementById('fab_progress_pill');
         if (progPill) {
-            progPill.innerText = `✔ Đã kiểm: ${verifiedCount}/${totalActiveRows} • Đạt: ${m.complianceRate}%`;
+            progPill.innerText = `👁️ Đã kiểm: ${verifiedCount}/${totalActiveRows}`;
         }
         const filterCountEl = document.getElementById('filter_issue_count');
         if (filterCountEl) {
-            filterCountEl.innerText = totalIssues;
+            filterCountEl.innerText = m.totalFail;
         }
         updateSubHeaderBadges();
     }
@@ -3572,7 +3126,7 @@
                     const storage = child.querySelector('.val-storage');
                     if (!storage) return;
                     const rid = storage.getAttribute('data-id') || storage.id.replace('s_', '');
-                    const isIssue = (storage.value === 'Không đạt' || storage.value === 'Đang khắc phục');
+                    const isIssue = (storage.value === 'Không đạt');
                     const isUnverified = !verifiedCriteriaMap[rid];
                     const rowText = (child.innerText || '').toLowerCase();
                     const matchesSearch = !currentSearchQuery || rowText.includes(currentSearchQuery);
@@ -3637,28 +3191,9 @@
     function addError() { 
         let desc = document.getElementById('err_desc').value.trim();
         let solution = document.getElementById('err_solution').value.trim();
-        let type = document.getElementById('err_type').value;
         let imgInput = document.getElementById('err_img');
 
-        let dateType = document.getElementById('err_date_type').value;
-        let dateVal = "";
-        if (dateType === 'date') {
-            let d = document.getElementById('err_date').value;
-            dateVal = d ? d.split('-').reverse().join('/') : "";
-        } else if (dateType === 'Khác') {
-            dateVal = document.getElementById('err_date_text').value.trim();
-        } else {
-            dateVal = dateType;
-        }
-            
-        let detail = "";
-        if (type === 'Ghi nhận trừ điểm tuân thủ') {
-            detail = document.getElementById('err_point').value || "Trừ 1 điểm";
-        } else if (type === 'Nhắc nhở (không trừ điểm)') {
-            detail = document.getElementById('err_remind').value || "Lần 1";
-        }
-
-        if (!desc) { showToast("⚠ Vui lòng nhập nội dung tồn tại CSVC TSC!"); return; }
+        if (!desc) { showToast("⚠ Vui lòng nhập mô tả hiện trạng thực tế!"); return; }
         
         let existingImgs = stagedErrorImages ? [...stagedErrorImages] : [];
         let linkedId = (editingErrorIndex >= 0 && errorList[editingErrorIndex])
@@ -3671,15 +3206,12 @@
             const combinedImgs = existingImgs.concat(newImgs);
             let errObj = {
                 desc: desc,
-                areaTitle: prevObj.areaTitle || 'Ghi nhận bổ sung tại TSC',
+                areaTitle: prevObj.areaTitle || 'Phát sinh ngoài danh mục',
                 itemTitle: prevObj.itemTitle || '',
                 actualIssue: desc,
                 stdSpec: prevObj.stdSpec || (linkedId ? getCriteriaStandardRequirement(linkedId) : ''),
-                evalState: prevObj.evalState || 'Không đạt',
+                evalState: 'Không đạt',
                 solution: solution,
-                type: type,
-                detail: detail,
-                date: dateVal,
                 imgs: combinedImgs,
                 linkedCriteriaId: linkedId || null
             };
@@ -3687,24 +3219,23 @@
             if (linkedId) {
                 inlineCriteriaImages[linkedId] = [...combinedImgs];
                 renderInlineThumbs(linkedId);
-                if (document.getElementById('isol_' + linkedId)) document.getElementById('isol_' + linkedId).value = solution;
-                if (document.getElementById('itype_' + linkedId)) {
-                    document.getElementById('itype_' + linkedId).value = type;
-                    onInlineTypeChange(linkedId, true);
+                if (document.getElementById('inote_' + linkedId)) {
+                    const prefix = `[${errObj.areaTitle}] ${errObj.itemTitle}: `;
+                    const cleanNote = desc.startsWith(prefix) ? desc.slice(prefix.length) : desc;
+                    document.getElementById('inote_' + linkedId).value = cleanNote;
+                    errObj.actualIssue = cleanNote;
                 }
-                if (type === 'Ghi nhận trừ điểm tuân thủ' && document.getElementById('ipt_' + linkedId)) {
-                    document.getElementById('ipt_' + linkedId).value = detail;
-                } else if (type === 'Nhắc nhở (không trừ điểm)' && document.getElementById('irmd_' + linkedId)) {
-                    document.getElementById('irmd_' + linkedId).value = detail;
+                if (document.getElementById('isol_' + linkedId)) {
+                    document.getElementById('isol_' + linkedId).value = solution;
                 }
             }
 
             if (editingErrorIndex >= 0) {
                 errorList[editingErrorIndex] = errObj;
-                showToast("✔ Đã cập nhật mục tồn tại CSVC TSC!");
+                showToast("✔ Đã cập nhật ghi nhận hiện trạng!");
             } else {
                 errorList.push(errObj);
-                showToast("✔ Đã thêm vào danh sách tồn tại CSVC TSC!");
+                showToast("✔ Đã thêm vào danh sách ghi nhận hiện trạng!");
             }
             cancelEditError();
             renderErrors();
@@ -3730,33 +3261,11 @@
 
         document.getElementById('err_desc').value = e.desc || "";
         document.getElementById('err_solution').value = e.solution || "";
-        document.getElementById('err_type').value = e.type || "Ghi nhận trừ điểm tuân thủ";
-        toggleErrDetail();
-
-        if (e.type === 'Ghi nhận trừ điểm tuân thủ') {
-            document.getElementById('err_point').value = e.detail || "Trừ 1 điểm";
-        } else if (e.type === 'Nhắc nhở (không trừ điểm)') {
-            document.getElementById('err_remind').value = e.detail || "Lần 1";
-        }
-
-        if (!e.date) {
-            document.getElementById('err_date_type').value = "date";
-            document.getElementById('err_date').value = "";
-        } else if (/^\d{2}\/\d{2}\/\d{4}$/.test(e.date)) {
-            document.getElementById('err_date_type').value = "date";
-            document.getElementById('err_date').value = e.date.split('/').reverse().join('-');
-        } else if (e.date === 'Khắc phục ngay trong ngày' || e.date === 'Đang trình xin ý kiến Lãnh đạo' || e.date === 'Cần phối hợp Phòng ban liên quan') {
-            document.getElementById('err_date_type').value = e.date;
-        } else {
-            document.getElementById('err_date_type').value = "Khác";
-            document.getElementById('err_date_text').value = e.date;
-        }
-        toggleDateInput();
 
         stagedErrorImages = e.imgs ? [...e.imgs] : [];
         renderStagedErrorImages();
 
-        document.getElementById('btn_submit_error').innerText = "💾 CẬP NHẬT MỤC TỒN TẠI";
+        document.getElementById('btn_submit_error').innerText = "💾 CẬP NHẬT GHI NHẬN HIỆN TRẠNG";
         document.getElementById('btn_cancel_error').style.display = "inline-flex";
         document.getElementById('err_desc').scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
@@ -3769,18 +3278,10 @@
 
         document.getElementById('err_desc').value = ""; 
         document.getElementById('err_solution').value = "";
-        document.getElementById('err_type').value = "Ghi nhận trừ điểm tuân thủ";
-        toggleErrDetail(); 
-        document.getElementById('err_point').value = "Trừ 1 điểm";
-        document.getElementById('err_remind').value = "Lần 1";
-        document.getElementById('err_date_type').value = "date";
-        document.getElementById('err_date').value = "";
-        document.getElementById('err_date_text').value = "";
-        toggleDateInput();
         document.getElementById('err_img').value = "";
         if (document.getElementById('err_img_cam')) document.getElementById('err_img_cam').value = "";
 
-        document.getElementById('btn_submit_error').innerText = "+ LƯU HẠNG MỤC TỒN TẠI CSVC TSC";
+        document.getElementById('btn_submit_error').innerText = "+ LƯU GHI NHẬN HIỆN TRẠNG";
         document.getElementById('btn_cancel_error').style.display = "none";
         document.getElementById('manual_error_form_box').style.display = "none";
     }
@@ -3807,7 +3308,7 @@
             .filter(item => !item.e.linkedCriteriaId || isCriteriaSectionActive(item.e.linkedCriteriaId));
 
         if (visibleErrors.length === 0) {
-            html = `<div style="text-align:center; padding:14px; color:#64748b; font-style:italic; background:#f8fafc; border-radius:8px;">Tất cả hạng mục CSVC tại Trụ Sở Chính đều Đạt tiêu chuẩn, chưa có tồn tại nào được ghi nhận.</div>`;
+            html = `<div style="text-align:center; padding:14px; color:#64748b; font-style:italic; background:#f8fafc; border-radius:8px;">Tất cả hạng mục CSVC tại Trụ Sở Chính đều Đạt tiêu chuẩn, chưa có ghi nhận Không đạt nào.</div>`;
         } else {
             visibleErrors.forEach((item, displayIdx) => {
                 const { e, origIndex } = item;
@@ -3818,28 +3319,17 @@
                             <button type="button" class="inline-thumb-edit" onclick="openAnnotatorModal('errorList', ${origIndex}, ${idxImg})">🖍️ Vẽ</button>
                         </div>`).join('')}</div>`
                     : "";
-                
-                let formattedType = e.type || '<i>Chưa nhập</i>';
-                if (e.type === 'Ghi nhận trừ điểm tuân thủ' && e.detail) {
-                    let pts = e.detail.replace('Trừ ', '');
-                    formattedType = `<span style="color:#dc2626;font-weight:700;">Trừ ${pts} tuân thủ</span>`;
-                } else if (e.type === 'Nhắc nhở (không trừ điểm)' && e.detail) {
-                    formattedType = `<span style="color:#d97706;font-weight:700;">Nhắc nhở ${e.detail.toLowerCase()}</span>`;
-                } else if (e.type === 'Theo dõi') {
-                    formattedType = `<span style="color:#0284c7;font-weight:700;">Theo dõi khắc phục</span>`;
-                }
 
                 const stdNote = e.stdSpec || (e.linkedCriteriaId ? getCriteriaStandardRequirement(e.linkedCriteriaId) : '');
 
                 html += `<div class="list-item">
                             <div class="item-action-btns">
                                 <button type="button" class="btn-edit-item" onclick="editError(${origIndex})">✏️ Sửa</button>
-                                <button type="button" class="btn-remove-item" onclick="removeError(${origIndex})" title="Xóa mục lỗi này (đồng thời đặt tiêu chí về Đạt)">×</button>
+                                <button type="button" class="btn-remove-item" onclick="removeError(${origIndex})" title="Xóa ghi nhận này (đồng thời đặt tiêu chí về Đạt)">×</button>
                             </div>
                             <b>Mục ${displayIdx+1}:</b> ${e.desc} <br> 
                             ${stdNote ? `<div style="font-size:12px; color:#475569; background:#f8fafc; padding:4px 8px; border-left:3px solid #94a3b8; margin:4px 0;">📌 <b>Tiêu chuẩn TSC:</b> ${stdNote}</div>` : ''}
-                            <span style="font-size: 12.5px;"><b>Hình thức:</b> ${formattedType} | <b>Hạn/Trạng thái:</b> ${e.date || '<i>Chưa xác định</i>'}</span> <br>
-                            <span style="font-size: 12.5px;"><b>Đề xuất xử lý:</b> ${e.solution || '<i>Chưa nhập</i>'}</span>
+                            ${e.solution ? `<span style="font-size: 12.5px;"><b>Đề xuất xử lý:</b> ${e.solution}</span>` : ''}
                             ${imgHtml}
                          </div>`;
             });
@@ -3858,12 +3348,7 @@
             criteriaStates[id] = {
                 val: el.value,
                 note: document.getElementById('inote_' + id)?.value || '',
-                sol: document.getElementById('isol_' + id)?.value || '',
-                type: document.getElementById('itype_' + id)?.value || 'Ghi nhận trừ điểm tuân thủ',
-                pt: document.getElementById('ipt_' + id)?.value || 'Trừ 1 điểm',
-                rmd: document.getElementById('irmd_' + id)?.value || 'Lần 1',
-                dtype: document.getElementById('idtype_' + id)?.value || 'date',
-                date: document.getElementById('idate_' + id)?.value || ''
+                sol: document.getElementById('isol_' + id)?.value || ''
             };
         });
 
@@ -3925,7 +3410,9 @@
     }
 
     function applyCriteriaUI(id, stObj) {
-        const val = (typeof stObj === 'object' && stObj !== null) ? (stObj.val || 'Đạt') : (stObj || 'Đạt');
+        let val = (typeof stObj === 'object' && stObj !== null) ? (stObj.val || 'Đạt') : (stObj || 'Đạt');
+        if (val === 'Đang khắc phục') val = 'Không đạt';
+
         const rowBox = document.getElementById('row_box_' + id);
         if (!rowBox) return;
         const sInput = document.getElementById('s_' + id);
@@ -3935,9 +3422,6 @@
         if (val === 'Đạt') {
             const b = rowBox.querySelector('.btn-eval.pass');
             if (b) b.classList.add('active');
-        } else if (val === 'Đang khắc phục') {
-            const b = rowBox.querySelector('.btn-eval.pending');
-            if (b) b.classList.add('active');
         } else if (val === 'Không đạt') {
             const b = rowBox.querySelector('.btn-eval.fail');
             if (b) b.classList.add('active');
@@ -3946,25 +3430,17 @@
             if (b) b.classList.add('active');
         }
 
-        const isIssue = (val === 'Không đạt' || val === 'Đang khắc phục');
+        const isIssue = (val === 'Không đạt');
         rowBox.classList.toggle('is-issue-row', isIssue);
 
         const failSub = document.getElementById('fail_sub_' + id);
         if (failSub) {
             failSub.style.display = isIssue ? 'flex' : 'none';
-            failSub.classList.toggle('pending-mode', val === 'Đang khắc phục');
         }
 
         if (typeof stObj === 'object' && stObj !== null) {
             if (stObj.note !== undefined && document.getElementById('inote_' + id)) document.getElementById('inote_' + id).value = stObj.note;
             if (stObj.sol !== undefined && document.getElementById('isol_' + id)) document.getElementById('isol_' + id).value = stObj.sol;
-            if (stObj.type && document.getElementById('itype_' + id)) document.getElementById('itype_' + id).value = stObj.type;
-            if (stObj.pt && document.getElementById('ipt_' + id)) document.getElementById('ipt_' + id).value = stObj.pt;
-            if (stObj.rmd && document.getElementById('irmd_' + id)) document.getElementById('irmd_' + id).value = stObj.rmd;
-            if (stObj.dtype && document.getElementById('idtype_' + id)) document.getElementById('idtype_' + id).value = stObj.dtype;
-            if (stObj.date !== undefined && document.getElementById('idate_' + id)) document.getElementById('idate_' + id).value = stObj.date;
-            onInlineTypeChange(id, true);
-            onInlineDateTypeChange(id, true);
         }
         renderInlineThumbs(id);
     }
@@ -4103,31 +3579,29 @@
 
         const unitRows = keys.map(k => {
             const item = basket[k];
-            const m = item.summaryMetrics || { remainingScore: 100, totalDeductPoints: 0, failDeductCount: 0, failRemindCount: 0, followUpCount: 0, rankLabel: 'Đạt chuẩn' };
+            const m = item.summaryMetrics || { passedCount: 34, totalApplicable: 34, complianceRate: 100 };
+            const errCnt = (item.errorList || []).length;
             return {
                 key: k,
                 dvkd: item.dvkd || 'Trụ Sở Chính',
                 date: item.date ? item.date.split('-').reverse().join('/') : '',
-                score: m.remainingScore,
-                deductPts: m.totalDeductPoints,
-                deductCnt: m.failDeductCount,
-                remindCnt: m.failRemindCount,
-                followCnt: m.followUpCount,
-                rank: m.rankLabel,
-                errCount: (item.errorList || []).length
+                passedCount: m.passedCount ?? 34,
+                totalApplicable: m.totalApplicable ?? 34,
+                complianceRate: m.complianceRate ?? 100,
+                errCount: errCnt
             };
-        }).sort((a, b) => b.score - a.score);
+        });
 
         const issueFreq = {};
         keys.forEach(k => {
             const errs = basket[k].errorList || [];
             errs.forEach(e => {
-                const label = e.itemTitle || e.desc.split(':')[0] || 'Lỗi khác';
+                const label = e.itemTitle || e.desc.split(':')[0] || 'Hạng mục khác';
                 issueFreq[label] = (issueFreq[label] || 0) + 1;
             });
         });
         const topIssues = Object.entries(issueFreq).sort((a, b) => b[1] - a[1]).slice(0, 5);
-        const avgScore = Math.round(unitRows.reduce((s, r) => s + r.score, 0) / unitRows.length);
+        const avgRate = Math.round(unitRows.reduce((s, r) => s + r.complianceRate, 0) / unitRows.length);
 
         container.innerHTML = `
             <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(120px, 1fr)); gap:8px; margin-bottom:12px;">
@@ -4136,16 +3610,16 @@
                     <div style="font-size:18px; font-weight:800; color:#0052cc;">${unitRows.length} phiếu</div>
                 </div>
                 <div style="background:#ecfdf5; border:1px solid #a7f3d0; padding:8px; border-radius:8px; text-align:center;">
-                    <div style="font-size:11px; color:#047857; font-weight:600;">Điểm Trung bình</div>
-                    <div style="font-size:18px; font-weight:800; color:#059669;">${avgScore} / 100</div>
+                    <div style="font-size:11px; color:#047857; font-weight:600;">Tỷ lệ Đạt TB</div>
+                    <div style="font-size:18px; font-weight:800; color:#059669;">${avgRate}%</div>
                 </div>
                 <div style="background:#fef2f2; border:1px solid #fecaca; padding:8px; border-radius:8px; text-align:center;">
-                    <div style="font-size:11px; color:#b91c1c; font-weight:600;">Tổng tồn tại</div>
+                    <div style="font-size:11px; color:#b91c1c; font-weight:600;">Tổng mục K.Đạt</div>
                     <div style="font-size:18px; font-weight:800; color:#dc2626;">${unitRows.reduce((s, r) => s + r.errCount, 0)} mục</div>
                 </div>
             </div>
 
-            <div style="font-weight:700; font-size:12.5px; color:#0f172a; margin-bottom:6px;">🏆 Bảng tổng hợp kết quả đánh giá TSC:</div>
+            <div style="font-weight:700; font-size:12.5px; color:#0f172a; margin-bottom:6px;">📋 Bảng tổng hợp kết quả kiểm tra TSC:</div>
             <div style="overflow-x:auto;">
                 <table style="width:100%; border-collapse:collapse; font-size:11.5px; margin-bottom:14px;">
                     <thead>
@@ -4153,9 +3627,8 @@
                             <th style="padding:5px; border:1px solid #cbd5e1;">STT</th>
                             <th style="padding:5px; border:1px solid #cbd5e1; text-align:left;">Khu vực / Tầng TSC</th>
                             <th style="padding:5px; border:1px solid #cbd5e1;">Ngày</th>
-                            <th style="padding:5px; border:1px solid #cbd5e1;">Điểm</th>
-                            <th style="padding:5px; border:1px solid #cbd5e1;">Trừ điểm</th>
-                            <th style="padding:5px; border:1px solid #cbd5e1;">Nhắc</th>
+                            <th style="padding:5px; border:1px solid #cbd5e1;">Hạng mục Đạt</th>
+                            <th style="padding:5px; border:1px solid #cbd5e1;">Không đạt</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -4164,9 +3637,8 @@
                                 <td style="padding:5px; border:1px solid #e2e8f0; text-align:center; font-weight:700;">#${i+1}</td>
                                 <td style="padding:5px; border:1px solid #e2e8f0; font-weight:600;">${r.dvkd}</td>
                                 <td style="padding:5px; border:1px solid #e2e8f0; text-align:center;">${r.date}</td>
-                                <td style="padding:5px; border:1px solid #e2e8f0; text-align:center; font-weight:800; color:${r.score >= 90 ? '#059669' : '#dc2626'};">${r.score}/100</td>
-                                <td style="padding:5px; border:1px solid #e2e8f0; text-align:center; color:#dc2626;">-${r.deductPts}đ (${r.deductCnt})</td>
-                                <td style="padding:5px; border:1px solid #e2e8f0; text-align:center;">${r.remindCnt}</td>
+                                <td style="padding:5px; border:1px solid #e2e8f0; text-align:center; font-weight:700; color:#059669;">${r.passedCount}/${r.totalApplicable} (${r.complianceRate}%)</td>
+                                <td style="padding:5px; border:1px solid #e2e8f0; text-align:center; font-weight:700; color:${r.errCount > 0 ? '#dc2626' : '#64748b'};">${r.errCount} mục</td>
                             </tr>
                         `).join('')}
                     </tbody>
@@ -4174,7 +3646,7 @@
             </div>
 
             ${topIssues.length > 0 ? `
-                <div style="font-weight:700; font-size:12.5px; color:#b91c1c; margin-bottom:6px;">📌 Top hạng mục phát sinh lỗi:</div>
+                <div style="font-weight:700; font-size:12.5px; color:#b91c1c; margin-bottom:6px;">📌 Các hạng mục thường gặp ghi nhận Không đạt:</div>
                 <ul style="margin:0; padding-left:18px; font-size:12px; color:#334155;">
                     ${topIssues.map(([name, cnt]) => `<li><b>${name}:</b> ghi nhận <b>${cnt}</b> lần</li>`).join('')}
                 </ul>
@@ -4195,7 +3667,8 @@
 
         container.innerHTML = keys.map(key => {
             const item = basket[key];
-            const m = item.summaryMetrics || { remainingScore: 100, totalDeductPoints: 0, totalFail: 0 };
+            const m = item.summaryMetrics || { passedCount: 34, totalApplicable: 34, complianceRate: 100 };
+            const errCnt = (item.errorList || []).length;
             const dStr = item.date ? item.date.split('-').reverse().join('/') : 'Chưa chọn ngày';
             const safeKey = key.replace(/'/g, "\\'");
             return `
@@ -4204,7 +3677,7 @@
                         <b style="color:#0f172a; font-size:14px;">🏢 ${item.dvkd || 'Trụ Sở Chính'}</b>
                         <span style="color:#64748b; font-size:11.5px;">(Ngày: ${dStr} • CBĐG: ${item.user || 'Chưa ghi'} • Lưu: ${item.savedDateFull || item.savedAt})</span><br>
                         <span style="font-size:12px; color:#1e3a8a;">
-                            Điểm CLDV: <b>${m.remainingScore}/100</b> (-${m.totalDeductPoints}đ) | Tồn tại: <b style="color:#dc2626;">${(m.totalFail || 0) + (m.pendingCount || 0)}</b>
+                            Kết quả: <b>Đạt ${m.passedCount ?? 34}/${m.totalApplicable ?? 34}</b> (${m.complianceRate ?? 100}%) | Không đạt: <b style="color:#dc2626;">${errCnt} mục</b>
                         </span>
                     </div>
                     <div class="basket-item-btns">
@@ -4275,12 +3748,7 @@
             applyCriteriaUI(id, {
                 val: 'Đạt',
                 note: '',
-                sol: DEFAULT_SOL_FAIL,
-                type: 'Ghi nhận trừ điểm tuân thủ',
-                pt: 'Trừ 1 điểm',
-                rmd: 'Lần 1',
-                dtype: 'date',
-                date: ''
+                sol: ''
             });
             const rowBox = document.getElementById('row_box_' + id);
             if (rowBox) rowBox.classList.remove('is-verified-row');
@@ -4353,13 +3821,12 @@
                 paper.classList.toggle('a4-zoom-fit', checked);
                 updateA4MobileScale();
             }
-        } else if (type === 'full_checklist') {
-            if (paper) {
-                paper.classList.toggle('hide-full-checklist', !checked);
-                updateA4MobileScale();
+        } else if (type === 'only_fail_checklist') {
+            isOnlyFailChecklistPrint = checked;
+            const checklistBody = document.getElementById('print_full_checklist_body');
+            if (checklistBody) {
+                checklistBody.innerHTML = buildFullChecklistTableHtml();
             }
-        } else if (type === 'std_quote') {
-            if (paper) paper.classList.toggle('hide-std-quote', !checked);
             updateA4MobileScale();
         } else if (type === 'sec_overview') {
             const el = document.getElementById('print_sec_overview_wrap');
@@ -4378,11 +3845,11 @@
         const paper = document.getElementById('a4_paper');
         if (!paper) return;
         paper.classList.remove('img-size-md', 'img-size-lg', 'img-size-xl');
-        paper.classList.add('img-size-' + (sizeVal || 'lg'));
+        paper.classList.add('img-size-' + (sizeVal || 'md'));
         updateA4MobileScale();
     }
 
-    // KHỞI TẠO CHÍNH KHI MỞ TRANG (KHÔNG CÓ MÀN HÌNH LOGIN)
+    // KHỞI TẠO CHÍNH KHI MỞ TRANG
     window.addEventListener('DOMContentLoaded', async function() {
         renderAllSectionsOnce();
         document.getElementById('inputScreen').style.display = 'block';
@@ -4548,36 +4015,57 @@
         }
     });
 
+    // === Dựng Bảng Checklist gộp trực tiếp Mô tả Hiện trạng, Đề xuất xử lý & Ảnh minh chứng ===
     function buildFullChecklistTableHtml() {
         let rowsHtml = '';
         TSC_SECTIONS.forEach(sec => {
             const secEval = document.getElementById(`${sec.key}_eval_status`)?.value === 'Yes';
             const secReason = (document.getElementById(`${sec.key}_reason`)?.value || '').trim();
+
+            const visibleItems = sec.items.filter(item => {
+                if (!isOnlyFailChecklistPrint) return true;
+                const val = secEval ? (document.getElementById('s_' + item.id)?.value || 'Đạt') : 'K.Áp dụng';
+                return val === 'Không đạt';
+            });
+
+            if (isOnlyFailChecklistPrint && visibleItems.length === 0) {
+                return;
+            }
+
             rowsHtml += `
                 <tr class="header-row">
                     <td class="text-center">${sec.num}</td>
                     <td colspan="6">${sec.title}${!secEval ? ` <i>(Không đánh giá${secReason ? ': ' + secReason : ''})</i>` : ''}</td>
                 </tr>
             `;
-            sec.items.forEach(item => {
+
+            visibleItems.forEach(item => {
                 const val = secEval ? (document.getElementById('s_' + item.id)?.value || 'Đạt') : 'K.Áp dụng';
                 const isNA = (val === 'K.Áp dụng');
                 const isPass = (val === 'Đạt');
-                const isFailOrPend = (val === 'Không đạt' || val === 'Đang khắc phục');
+                const isFail = (val === 'Không đạt');
 
                 let noteAndSol = '';
-                if (isFailOrPend) {
+                if (isFail) {
                     const rawNote = (document.getElementById('inote_' + item.id)?.value || '').trim();
                     const rawSol = (document.getElementById('isol_' + item.id)?.value || '').trim();
-                    const dtType = document.getElementById('idtype_' + item.id)?.value || 'date';
-                    const rawDate = document.getElementById('idate_' + item.id)?.value || '';
-                    const dateStr = dtType === 'date' ? (rawDate ? rawDate.split('-').reverse().join('/') : '') : dtType;
+                    const imgsArr = inlineCriteriaImages[item.id] || [];
 
-                    const stateTag = val === 'Đang khắc phục' ? '<b>[Đang xử lý]</b> ' : '';
-                    const notePart = rawNote ? `<b>Hiện trạng:</b> ${rawNote}` : `<b>Hiện trạng:</b> Chưa đạt tiêu chuẩn`;
-                    const solPart = rawSol ? `<br><b>Đề xuất XL:</b> ${rawSol}` : '';
-                    const dlPart = dateStr ? `<br><b>Thời hạn:</b> ${dateStr}` : '';
-                    noteAndSol = `${stateTag}${notePart}${solPart}${dlPart}`;
+                    const notePart = rawNote
+                        ? `<div><b>• Hiện trạng:</b> ${rawNote}</div>`
+                        : `<div><b>• Hiện trạng:</b> Chưa đạt tiêu chuẩn quy định</div>`;
+                    const solPart = rawSol
+                        ? `<div style="margin-top:2px;"><b>• Đề xuất xử lý:</b> ${rawSol}</div>`
+                        : '';
+
+                    const gridClass = imgsArr.length === 1 ? 'print-img-grid single-img' : 'print-img-grid';
+                    const imgsHtml = imgsArr.length > 0
+                        ? `<div class="${gridClass}">${imgsArr.map((img, idxImg) => `
+                            <img src="${img}" class="img-print" onclick="openReportImageLightbox(this.src, 'Mục ${item.stt} - Ảnh ${idxImg+1}')">
+                        `).join('')}</div>`
+                        : '';
+
+                    noteAndSol = `${notePart}${solPart}${imgsHtml}`;
                 }
 
                 rowsHtml += `
@@ -4587,17 +4075,57 @@
                         <td>${item.spec}</td>
                         <td class="text-center">${isNA ? '<b>X</b>' : ''}</td>
                         <td class="text-center">${isPass ? '<b>X</b>' : ''}</td>
-                        <td class="text-center" style="color:#dc2626;">${isFailOrPend ? '<b>X</b>' : ''}</td>
+                        <td class="text-center" style="color:#dc2626;">${isFail ? '<b>X</b>' : ''}</td>
                         <td contenteditable="true" class="editable-print-field">${noteAndSol}</td>
                     </tr>
                 `;
             });
         });
+
+        // Gộp thêm các mục phát sinh ngoài danh mục (nếu có) vào cuối bảng Checklist
+        const manualErrors = getActiveErrorList().filter(e => !e.linkedCriteriaId);
+        if (manualErrors.length > 0) {
+            rowsHtml += `
+                <tr class="header-row">
+                    <td class="text-center">+</td>
+                    <td colspan="6">GHI NHẬN PHÁT SINH BỔ SUNG NGOÀI DANH MỤC TẠI TRỤ SỞ CHÍNH</td>
+                </tr>
+            `;
+            manualErrors.forEach((e, idx) => {
+                const imgsArr = e.imgs || [];
+                const gridClass = imgsArr.length === 1 ? 'print-img-grid single-img' : 'print-img-grid';
+                const imgsHtml = imgsArr.length > 0
+                    ? `<div class="${gridClass}">${imgsArr.map((img, idxImg) => `
+                        <img src="${img}" class="img-print" onclick="openReportImageLightbox(this.src, 'Phát sinh ${idx+1} - Ảnh ${idxImg+1}')">
+                    `).join('')}</div>`
+                    : '';
+
+                const notePart = `<div><b>• Hiện trạng:</b> ${e.desc}</div>`;
+                const solPart = e.solution ? `<div style="margin-top:2px;"><b>• Đề xuất xử lý:</b> ${e.solution}</div>` : '';
+
+                rowsHtml += `
+                    <tr>
+                        <td class="text-center"><b>PS.${idx + 1}</b></td>
+                        <td><b>Hạng mục phát sinh</b></td>
+                        <td>Đảm bảo mỹ quan, an toàn &amp; vận hành tốt tại TSC</td>
+                        <td class="text-center"></td>
+                        <td class="text-center"></td>
+                        <td class="text-center" style="color:#dc2626;"><b>X</b></td>
+                        <td contenteditable="true" class="editable-print-field">${notePart}${solPart}${imgsHtml}</td>
+                    </tr>
+                `;
+            });
+        }
+
+        if (!rowsHtml) {
+            rowsHtml = `<tr><td colspan="7" class="text-center" style="padding:12px; font-style:italic;">✔ Tất cả các hạng mục kiểm tra tại Trụ Sở Chính đều Đạt tiêu chuẩn, không có hạng mục Không đạt.</td></tr>`;
+        }
+
         return rowsHtml;
     }
 
     function openPreview() {
-        let inputDvkd = document.getElementById('inp_dvkd').value.trim() || "Tru_So_Chinh";
+        let inputDvkd = document.getElementById('inp_dvkd').value.trim() || "Trụ Sở Chính";
         let inputDate = document.getElementById('inp_date').value;
         let formattedDate = inputDate ? inputDate.split('-').reverse().join('-') : "Chua_co_ngay";
         document.title = `Phieu_DanhGia_CLDV_TSC_${formattedDate}`;
@@ -4619,13 +4147,13 @@
 
         let summaryBoard = `
             <table class="summary-board">
-                <thead><tr><th colspan="4">TỔNG HỢP KẾT QUẢ ĐÁNH GIÁ CHẤT LƯỢNG DỊCH VỤ - CSVC TRỤ SỞ CHÍNH</th></tr></thead>
+                <thead><tr><th colspan="4">TỔNG HỢP KẾT QUẢ KIỂM TRA CHẤT LƯỢNG DỊCH VỤ - CSVC TRỤ SỞ CHÍNH</th></tr></thead>
                 <tbody>
                     <tr>
-                        <td width="26%">Điểm CLDV - CSVC<span class="val-highlight">${scoreMetrics.remainingScore} / 100</span><small style="font-size:9.5pt;">(Tỷ lệ đạt: ${scoreMetrics.complianceRate}% - ${scoreMetrics.passedCount}/${scoreMetrics.totalApplicable} mục)</small></td>
-                        <td width="24%">Tổng Điểm Trừ<br>Tuân Thủ<span class="val-highlight">-${scoreMetrics.totalDeductPoints} điểm</span><small style="font-size:9.5pt;">(${scoreMetrics.failDeductCount} hạng mục trừ điểm)</small></td>
-                        <td width="25%">Hạng Mục Nhắc Nhở<span class="val-highlight">${scoreMetrics.failRemindCount} mục</span><small style="font-size:9.5pt;">(Nhắc nhở khắc phục, chưa trừ điểm)</small></td>
-                        <td width="25%">Đang Xử Lý / Theo Dõi<span class="val-highlight">${scoreMetrics.followUpCount} mục</span><small style="font-size:9.5pt;">(Theo dõi tiến độ hoàn thành)</small></td>
+                        <td width="25%">Tổng Hạng Mục<br>Đánh Giá<span class="val-highlight">${scoreMetrics.totalApplicable} mục</span><small style="font-size:9.5pt;">(Không đánh giá: ${scoreMetrics.totalNA} mục)</small></td>
+                        <td width="25%">Hạng Mục<br>Đạt Chuẩn<span class="val-highlight">${scoreMetrics.passedCount} mục</span><small style="font-size:9.5pt;">(Đảm bảo tiêu chuẩn TSC)</small></td>
+                        <td width="25%">Hạng Mục<br>Không Đạt<span class="val-highlight">${scoreMetrics.activeIssueCount} mục</span><small style="font-size:9.5pt;">(Cần khắc phục / xử lý)</small></td>
+                        <td width="25%">Tỷ Lệ Đạt Chuẩn<span class="val-highlight">${scoreMetrics.complianceRate}%</span><small style="font-size:9.5pt;">(${scoreMetrics.passedCount}/${scoreMetrics.totalApplicable} hạng mục)</small></td>
                     </tr>
                 </tbody>
             </table>
@@ -4650,21 +4178,17 @@
                                 <td><i>${s.reason ? 'Lý do: ' + s.reason : 'Không thực hiện đánh giá tại thời điểm kiểm tra.'}</i></td>
                             </tr>`;
                         }
-                        const totalIssues = s.fail + s.pending;
-                        if (totalIssues === 0) {
+                        if (s.fail === 0) {
                             return `<tr>
                                 <td><b>${s.name}</b></td>
                                 <td class="text-center"><b>✔ Đạt (${s.pass}/${s.total})</b></td>
                                 <td>Sạch sẽ, không bụi bẩn, trang thiết bị hoạt động tốt đúng tiêu chuẩn TSC.</td>
                             </tr>`;
                         }
-                        let statusText = [];
-                        if (s.fail > 0) statusText.push(`${s.fail} mục không đạt`);
-                        if (s.pending > 0) statusText.push(`${s.pending} mục đang xử lý`);
                         return `<tr>
                             <td><b>${s.name}</b></td>
-                            <td class="text-center"><b>⚠ Cần xử lý (${totalIssues})</b></td>
-                            <td>Ghi nhận ${statusText.join(', ')}: <i>${s.issueNames.join('; ')}</i> (Chi tiết tại Mục I).</td>
+                            <td class="text-center"><b>⚠ Không đạt (${s.fail})</b></td>
+                            <td>Ghi nhận ${s.fail} mục không đạt: <i>${s.issueNames.join('; ')}</i> (Chi tiết tại bảng Checklist).</td>
                         </tr>`;
                     }).join('')}
                 </tbody>
@@ -4672,88 +4196,7 @@
         `;
         document.getElementById('print_sec_overview_wrap').innerHTML = secOverviewHtml;
 
-        const checkEval = (id) => document.getElementById(id).value === 'Yes';
-        const setupTable = (isEval, reasonId, tableId, noneId, dataList, renderFn, colCount = 5, emptyMsg = "Không có ghi nhận tồn tại.") => {
-            const tbl = document.getElementById(tableId);
-            const noneDiv = document.getElementById(noneId);
-            const reason = document.getElementById(reasonId).value;
-            if (!isEval) {
-                tbl.style.display = 'none';
-                noneDiv.style.display = 'block';
-                noneDiv.innerHTML = `(Không có phát sinh / Không thực hiện đánh giá)${reason ? ` - Lý do: ${reason}` : ''}`;
-            } else {
-                tbl.style.display = 'table';
-                noneDiv.style.display = 'none';
-                document.getElementById(tableId.replace('table', 'body')).innerHTML = dataList.length === 0
-                    ? `<tr><td colspan="${colCount}" class="text-center" style="padding:10px; font-style:italic;">${emptyMsg}</td></tr>`
-                    : dataList.map(renderFn).join('');
-            }
-        };
-
-        const activeErrList = getActiveErrorList();
-
-        setupTable(checkEval('csvc_eval_status'), 'csvc_reason', 'print_error_table', 'print_error_none', activeErrList, (e, i) => {
-            let formattedType = e.type || '';
-            if (e.type === 'Ghi nhận trừ điểm tuân thủ' && e.detail) {
-                let pts = e.detail.replace('Trừ ', '');
-                formattedType = `Không đạt<br><small>(Trừ <b>${pts}</b>)</small>`;
-            } else if (e.type === 'Nhắc nhở (không trừ điểm)' && e.detail) {
-                formattedType = `Không đạt<br><small>(Nhắc <b>${e.detail.toLowerCase()}</b>)</small>`;
-            } else if (e.type === 'Theo dõi') {
-                formattedType = `<b>Đang xử lý / Theo dõi</b>`;
-            }
-
-            const stdReq = e.stdSpec || (e.linkedCriteriaId ? getCriteriaStandardRequirement(e.linkedCriteriaId) : '');
-            const areaName = e.areaTitle || (e.linkedCriteriaId ? getAreaTitleForCriteria(e.linkedCriteriaId) : '');
-            const itemTitle = e.itemTitle || '';
-
-            let contentCellHtml = '';
-            if (itemTitle) {
-                const rawNote = (document.getElementById('inote_' + e.linkedCriteriaId)?.value || '').trim();
-                const displayActual = rawNote || e.actualIssue || 'Chưa đảm bảo đúng tiêu chuẩn quy định';
-                contentCellHtml = `
-                    <div contenteditable="true" class="editable-print-field">
-                        ${areaName ? `<div style="font-size:9.5pt; color:#334155; text-transform:uppercase; font-weight:bold;">▪ ${areaName}</div>` : ''}
-                        <div style="margin-top:2px;"><b>Danh mục: ${itemTitle}</b></div>
-                        <div style="margin-top:3px;">🔍 <b>Hiện trạng thực tế:</b> ${displayActual}</div>
-                    </div>
-                    ${stdReq ? `<div class="std-quote-box" contenteditable="true">📌 <b>Tiêu chuẩn TSC:</b> ${stdReq}</div>` : ''}
-                `;
-            } else {
-                contentCellHtml = `
-                    <div contenteditable="true" class="editable-print-field">${e.desc}</div>
-                    ${stdReq ? `<div class="std-quote-box" contenteditable="true">📌 <b>Tiêu chuẩn TSC:</b> ${stdReq}</div>` : ''}
-                `;
-            }
-            
-            let solutionCell = `<div contenteditable="true" class="editable-print-field">${e.solution || '-'}</div>`;
-            if (e.date) {
-                solutionCell += `<div style="margin-top:6px; font-size:10pt; border-top:1px dashed #cbd5e1; padding-top:4px;">⏳ Thời hạn/Trạng thái: <b contenteditable="true" class="editable-print-field">${e.date}</b></div>`;
-            }
-            const imgsArr = e.imgs || [];
-            const tagsArr = e.imgTags || (e.linkedCriteriaId && inlineCriteriaImgTags[e.linkedCriteriaId]) || [];
-            const hasAfterTag = tagsArr.some(t => t === 'Sau KP');
-            const gridClass = imgsArr.length === 1 ? 'print-img-grid single-img' : 'print-img-grid';
-            const imgsHtml = imgsArr.length > 0
-                ? `<div class="${gridClass}">${imgsArr.map((img, idxImg) => {
-                    const tag = tagsArr[idxImg];
-                    const badgeHtml = (hasAfterTag || e.date === 'Khắc phục ngay trong ngày') && tag
-                        ? `<div style="font-size:8.5pt; font-weight:bold; color:${tag === 'Sau KP' ? '#047857' : '#b91c1c'}; margin-bottom:2px;">[${tag}]</div>`
-                        : '';
-                    return `<div style="display:inline-block; text-align:center;">${badgeHtml}<img src="${img}" class="img-print" onclick="openReportImageLightbox(this.src, 'Hình ảnh thực tế Mục ${i+1}')"></div>`;
-                }).join('')}</div>`
-                : '-';
-            
-            return `<tr>
-                        <td class="text-center">${i+1}</td>
-                        <td>${contentCellHtml}</td>
-                        <td class="text-center" style="color: #000;">${formattedType}</td>
-                        <td>${solutionCell}</td>
-                        <td class="text-center col-img-cell">${imgsHtml}</td>
-                    </tr>`;
-        }, 5, "✔ Toàn bộ các hạng mục Cơ sở vật chất, Không gian làm việc & Hệ thống kỹ thuật tại Trụ Sở Chính đều Đạt tiêu chuẩn.");
-
-        // Đổ dữ liệu Bảng Checklist 34 tiêu chí chuẩn theo file PDF
+        // Đổ dữ liệu Bảng Checklist 34 tiêu chí gộp trực tiếp hiện trạng & hình ảnh
         const checklistBody = document.getElementById('print_full_checklist_body');
         if (checklistBody) {
             checklistBody.innerHTML = buildFullChecklistTableHtml();
@@ -4761,29 +4204,28 @@
 
         // Xây dựng Phụ lục Hình ảnh minh chứng phóng to ở cuối biên bản
         const appendixWrap = document.getElementById('print_photo_appendix_wrap');
+        const activeErrList = getActiveErrorList();
         if (appendixWrap) {
             let appendixCards = [];
 
-            if (checkEval('csvc_eval_status')) {
+            if (document.getElementById('csvc_eval_status')?.value === 'Yes') {
                 activeErrList.forEach((e, idx) => {
                     const imgsArr = e.imgs || [];
                     if (imgsArr.length === 0) return;
-                    const tagsArr = e.imgTags || (e.linkedCriteriaId && inlineCriteriaImgTags[e.linkedCriteriaId]) || [];
                     const titleText = e.itemTitle ? `[${e.areaTitle || 'TSC'}] ${e.itemTitle}` : e.desc;
                     const rawNote = e.linkedCriteriaId ? (document.getElementById('inote_' + e.linkedCriteriaId)?.value || '').trim() : '';
                     const noteText = rawNote || e.actualIssue || '';
 
                     imgsArr.forEach((imgSrc, imgIdx) => {
-                        const tagLabel = tagsArr[imgIdx] ? ` (${tagsArr[imgIdx]})` : '';
-                        const safeCap = `Mục I.${idx + 1} - Ảnh ${imgIdx + 1}${tagLabel}`.replace(/'/g, "\\'");
+                        const safeCap = `Mục ${idx + 1} - Ảnh ${imgIdx + 1}`.replace(/'/g, "\\'");
                         appendixCards.push(`
                             <div class="appendix-card">
                                 <div class="appendix-card-header">
-                                    <b>Mục I.${idx + 1} — Ảnh ${imgIdx + 1}${tagLabel}:</b> ${titleText}<br>
+                                    <b>Hạng mục: ${titleText} (Ảnh ${imgIdx + 1})</b><br>
                                     ${noteText ? `<span style="color:#334155;">🔍 <i>Hiện trạng: ${noteText}</i></span>` : ''}
                                 </div>
                                 <div class="appendix-img-box">
-                                    <img src="${imgSrc}" onclick="openReportImageLightbox(this.src, '${safeCap}')" alt="Ảnh phóng to Mục I.${idx+1}">
+                                    <img src="${imgSrc}" onclick="openReportImageLightbox(this.src, '${safeCap}')" alt="Ảnh phóng to">
                                 </div>
                             </div>
                         `);
